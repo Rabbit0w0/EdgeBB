@@ -1,0 +1,195 @@
+/*
+* @description: 短代码样式表
+* @author: youranreus
+*/
+
+
+.ArtinArt{
+	padding: 20px;
+	background: #eee;
+	border-radius: 30px;
+	max-width: 300px;
+	margin: 10px auto;
+}
+.ArtinArt h4{
+	font-size: 1.5rem!important;
+	margin:0!important;
+	border: none!important;
+}
+.ArtinArt h4 a{
+	display: block;
+}
+.ArtinArt h4:hover{
+	letter-spacing: normal!important;
+	border: none!important;
+}
+.ArtinArt h4 a::after{
+	display: none;
+}
+.ArtinArt h4 a:hover{
+	color:#07f!important;
+	background: rgba(255,255,255,0)!important;
+}
+.ArtinArt p {
+	margin-top:5px!important;
+	margin-bottom: 0!important;
+}
+
+.post-download a{
+  border: 1px solid #666;
+  padding: 0.7rem 2rem;
+  display: inline-block;
+  max-width: 150px;
+  border-radius: 100000000rem;
+  text-align: center;
+  color:#333!important;
+  text-overflow: ellipsis;
+  white-space: nowrap !important;
+  overflow: hidden;
+
+  -webkit-transition: .3s ease all;
+  -moz-transition: .3s ease all;
+  -ms-transition: .3s ease all;
+  -o-transition: .3s ease all;
+  transition: .3s ease all;
+}
+.post-download a span::before{
+  font-size: 1rem;
+  content: ' ';
+  display: inline-block;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  top: 0.2rem;
+  left: -0.4rem;
+  background-size: contain;
+  background-image: url(../image/dl-b.png);
+  -webkit-transition: .3s ease all;
+  -moz-transition: .3s ease all;
+  -ms-transition: .3s ease all;
+  -o-transition: .3s ease all;
+  transition: .3s ease all;
+}
+.post-download a:hover span::before{
+  font-size: 1rem;
+  content: ' ';
+  display: inline-block;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  top: 0.2rem;
+  left: -0.4rem;
+  background-size: contain;
+  background-image: url(../image/dl-w.png);
+}
+
+.post-download a::after{
+  display: none;
+}
+.post-download a:hover{
+  background:#666;
+  color:white!important;
+}
+
+
+.post-content-tag{
+	display: inline-block;
+  margin: 0 5px;
+  padding: .2rem .4rem;
+	font-size:12px;
+	vertical-align: middle;
+  border-radius: 3px;
+}
+.tag-blue{
+	color: RGB(121,145,209);
+	border: 0.0625rem solid RGB(121,145,209);
+}
+.tag-black{
+	color: #444;
+	border: 0.0625rem solid #444;
+}
+.tag-red{
+	color: RGBA(184,2,51,0.6);
+	border: 0.0625rem solid RGBA(184,2,51,0.6);
+}
+
+.shortcode-notice{
+	background: #eef6fd;
+  padding: 8px 20px;
+  border-left: 3px solid #38a3fd;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 10px;
+  color: #777;
+	font-size:15px;
+}
+
+.shortcode-warn{
+	background: #fcf1f1;
+  padding: 8px 20px;
+  border-left: 3px solid #ed0000;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 10px;
+  color: #777;
+	font-size:15px;
+}
+.post-content-notice{
+	margin:15px 0;
+	border:1.5px solid RGB(121,145,209);
+	border-radius: 10px;
+	padding: 1.5rem 1.25rem 1.5rem 3.5rem;
+	position: relative;
+	overflow: hidden;
+}
+.post-content-content{
+	position: relative;
+	z-index:2;
+}
+.post-content-notice:before{
+	content: " ";
+  position: absolute;
+  top: -10;
+  right: 0;
+  bottom: 0;
+  left: -50;
+  background: url(../image/notice.svg) no-repeat;
+  opacity: .1;
+	z-index:1;
+}
+
+.post-content-warn{
+	margin:15px 0;
+	border:1.5px solid RGBA(184,2,51,0.6);
+	border-radius: 10px;
+	padding: 1.5rem 1.25rem 1.5rem 3.5rem;
+	position: relative;
+	overflow: hidden;
+}
+.post-content-warn:before{
+	content: " ";
+  position: absolute;
+	top: -10;
+  right: 0;
+  bottom: 0;
+  left: -50;
+  background: url(../image/warn.svg) no-repeat;
+  opacity: .1;
+	z-index:1;
+}
+
+.collapse-box{
+	border: 1px solid #ddd;
+	margin:30px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.collapse-title{
+	background: #fafafa;
+	cursor: pointer;
+}
+.collapse-title p{
+	margin:0!important;
+	padding:15px;
+}
+.collapse-content{
+	padding: 15px;
+}
