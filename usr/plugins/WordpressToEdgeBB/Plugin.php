@@ -29,7 +29,7 @@ class WordpressToEdge_Plugin implements Edge_Plugin_Interface
         }
 		*/
     
-        Helper::addPanel(1, 'WordpressToEdge/panel.php', _t('从 WordPress 导入数据'), _t('从 WordPress 导入数据'), 'administrator');
+        Helper::addPanel(1, 'WordpressToEdgeBB/panel.php', _t('从 WordPress 导入数据'), _t('从 WordPress 导入数据'), 'administrator');
         Helper::addAction('wordpress-to-edge', 'WordpressToEdge_Action');
         return _t('请在插件设置里设置 WordPress 所在的数据库参数') . $error;
     }
@@ -45,7 +45,7 @@ class WordpressToEdge_Plugin implements Edge_Plugin_Interface
     public static function deactivate()
     {
         Helper::removeAction('wordpress-to-edge');
-        Helper::removePanel(1, 'WordpressToEdge/panel.php');
+        Helper::removePanel(1, 'WordpressToEdgeBB/panel.php');
     }
     
     /**
