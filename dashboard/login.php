@@ -35,7 +35,7 @@ $bodyClass = 'body-100';
 				<div id="large-header" class="large-header" style="height: 695px;">
 					<canvas id="demo-canvas" width="1920" height="695"></canvas>
 					<div class="logo_box">
-						<h3>EdgeBB 后台管理</h3>
+						<h3>Log in to EdgeBB</h3>
 						<form action="<?php $options->loginAction(); ?>" method="post" name="login" role="form">
 							<div class="input_outer">
 								<span class="u_user"></span>

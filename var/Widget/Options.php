@@ -182,7 +182,7 @@ class Widget_Options extends Edge_Widget
     protected function ___adminUrl()
     {
         return Edge_Common::url(defined('__EDGE_ADMIN_DIR__') ?
-        __EDGE_ADMIN_DIR__ : '/admin/', $this->rootUrl);
+        __EDGE_ADMIN_DIR__ : '/dashboard/', $this->rootUrl);
     }
 
     /**
@@ -375,7 +375,7 @@ class Widget_Options extends Edge_Widget
         $this->rootUrl = defined('__EDGE_ROOT_URL__') ? __EDGE_ROOT_URL__ : $this->request->getRequestRoot();
         if (defined('__EDGE_ADMIN__')) {
             /** 识别在admin目录中的情况 */
-            $adminDir = '/' . trim(defined('__EDGE_ADMIN_DIR__') ? __EDGE_ADMIN_DIR__ : '/admin/', '/');
+            $adminDir = '/' . trim(defined('__EDGE_ADMIN_DIR__') ? __EDGE_ADMIN_DIR__ : '/dashboard/', '/');
             $this->rootUrl = substr($this->rootUrl, 0, - strlen($adminDir));
         }
 

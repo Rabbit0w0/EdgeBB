@@ -33,12 +33,12 @@ if (!empty($currentMenu)) {
     $params = parse_url($currentMenu[2]);
     $adminFile = basename($params['path']);
 
-    if (!$user->logged && !Typecho_Cookie::get('__edge_first_run')) {
+    if (!$user->logged && !Edge_Cookie::get('__edge_first_run')) {
 
         if ('welcome.php' != $adminFile) {
-            $response->redirect(Typecho_Common::url('welcome.php', $options->adminUrl));
+            $response->redirect(Edge_Common::url('welcome.php', $options->adminUrl));
         } else {
-            Typecho_Cookie::set('__edge_first_run', 1);
+            Edge_Cookie::set('__edge_first_run', 1);
         }
     } elseif ($user->pass('administrator', true)) {
         /** 检测版本是否升级 */

@@ -238,7 +238,7 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
              'admin_url'        => array(
                 'desc'          => _t( '管理区域的地址' ),
                 'readonly'      => true,
-                'value'         => $this->options->siteUrl.'admin/'
+                'value'         => $this->options->siteUrl.'dashboard/'
             ),
 
             'post_thumbnail'    => array(

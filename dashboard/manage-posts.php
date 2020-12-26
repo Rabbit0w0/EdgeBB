@@ -64,7 +64,7 @@ $isAllPosts = ('on' == $request->get('__edge_all_posts') || 'on' == Edge_Cookie:
 						<a href="<?php $options->adminUrl('manage-posts.php'
 							. (isset($request->status) || isset($request->uid) ? '?' .
 								(isset($request->status) ? 'status=' . htmlspecialchars($request->get('status')) : '') .
-								(isset($request->uid) ? '?uid=' . htmlspecialchars($request->get('uid')) : '') : '')); ?>"><?php _e('&laquo; 取消筛选'); ?></a>
+								(isset($request->uid) ? 'uid=' . htmlspecialchars($request->get('uid')) : '') : '')); ?>"><?php _e('&laquo; 取消筛选'); ?></a>
 						<?php endif; ?>
 						<input type="text" class="text-s" placeholder="<?php _e('请输入关键字'); ?>" value="<?php echo htmlspecialchars($request->keywords); ?>" name="keywords" />
 						<select name="category">
