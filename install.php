@@ -176,9 +176,9 @@ Edge_Cookie::set('__edge_lang', $lang);
 <head lang="zh-CN">
     <meta charset="<?php _e('UTF-8'); ?>" />
 	<title><?php _e('EdgeBB 安装程序'); ?></title>
-    <link rel="stylesheet" type="text/css" href="admin/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="admin/css/grid.css" />
-    <link rel="stylesheet" type="text/css" href="admin/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="dashboard/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="dashboard/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="dashboard/css/style.css" />
 </head>
 <body>
 <div class="edge-install-patch">
@@ -232,10 +232,10 @@ Edge_Cookie::set('__edge_lang', $lang);
                     <?php
                         if (isset($_REQUEST['user']) && isset($_REQUEST['password'])) {
                             $loginUrl = _u() . '/index.php/action/login?name=' . urlencode(_r('user')) . '&password='
-                            . urlencode(_r('password')) . '&referer=' . _u() . '/admin/index.php';
+                            . urlencode(_r('password')) . '&referer=' . _u() . '/dashboard/index.php';
                             $loginUrl = Edge_Widget::widget('Widget_Security')->getTokenUrl($loginUrl);
                         } else {
-                            $loginUrl = _u() . '/admin/index.php';
+                            $loginUrl = _u() . '/dashboard/index.php';
                         }
                     ?>
                         <li><a href="<?php echo $loginUrl; ?>"><?php _e('点击这里访问您的控制面板'); ?></a></li>
@@ -645,6 +645,6 @@ Edge_Db::set(\$db);
     </div>
 </div>
 <?php
-include 'admin/copyright.php';
-include 'admin/footer.php';
+include 'dashboard/copyright.php';
+include 'dashboard/footer.php';
 ?>

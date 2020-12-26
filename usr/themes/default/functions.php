@@ -155,8 +155,8 @@ function themeFields(Edge_Widget_Helper_Layout $layout)
 //感谢泽泽大佬的代码
 Edge_Plugin::factory('Widget_Abstract_Contents')->excerptEx = array('Gx','reply2see');
 Edge_Plugin::factory('Widget_Abstract_Contents')->contentEx = array('Gx','reply2see');
-Edge_Plugin::factory('admin/write-post.php')->bottom = array('Gx', 'addButton');
-Edge_Plugin::factory('admin/write-page.php')->bottom = array('Gx', 'addButton');
+Edge_Plugin::factory('dashboard/write-post.php')->bottom = array('Gx', 'addButton');
+Edge_Plugin::factory('dashboard/write-page.php')->bottom = array('Gx', 'addButton');
 
 class Gx {
 
@@ -476,8 +476,8 @@ function shortcodeContent($content)
 /**
 * 泽泽大佬的字数统计
 */
-Edge_Plugin::factory('admin/write-post.php')->bottom = array('myG', 'one');
-Edge_Plugin::factory('admin/write-page.php')->bottom = array('myG', 'one');
+Edge_Plugin::factory('dashboard/write-post.php')->bottom = array('myG', 'one');
+Edge_Plugin::factory('dashboard/write-page.php')->bottom = array('myG', 'one');
 class myG {
     public static function one()
     {

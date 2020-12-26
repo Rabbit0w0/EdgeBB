@@ -233,7 +233,7 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
             'login_url'         => array(
                 'desc'          => _t( '登录地址' ),
                 'readonly'      => true,
-                'value'         => $this->options->siteUrl.'admin/login.php'
+                'value'         => $this->options->siteUrl.'dashboard/login.php'
             ),
              'admin_url'        => array(
                 'desc'          => _t( '管理区域的地址' ),
