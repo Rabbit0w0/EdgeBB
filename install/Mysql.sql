@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 2.11.5
+-- version 5.0.4
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2008 年 07 月 06 日 18:00
--- 服务器版本: 5.0.51
--- PHP 版本: 5.2.5
+-- 生成日期: 2020 年 07 月 06 日 18:00
+-- 服务器版本: 8.0.22
+-- PHP 版本: 7.3.25
 
 --
 -- 数据库: `edge`
