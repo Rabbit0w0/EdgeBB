@@ -42,7 +42,7 @@ $bodyClass = 'body-100';
 								<input name="name" class="text" type="text" placeholder="Account">
 							</div>
 							<div class="input_outer">
-								<span class="us_uer"></span>
+								<span class="u_user"></span>
 								<input name="password" class="text"  type="password" placeholder="Password">
 							</div>
 							<div class="remember" style="text-align:center;font-size: 87.5%;">

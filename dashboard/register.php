@@ -40,7 +40,7 @@ if(!$options->allowRegister){
 				<div id="large-header" class="large-header" style="height: 695px;">
 					<canvas id="demo-canvas" width="1920" height="695"></canvas>
 					<div class="logo_box">
-						<h3>Log in to EdgeBB</h3>
+						<h3>Get started</h3>
                             <form action="<?php $options->registerAction(); ?>" method="post" name="register" role="form">
                             <div class="input_outer">
 								<span class="u_user"></span>
@@ -50,6 +50,14 @@ if(!$options->allowRegister){
 								<span class="u_user"></span>
 								<input name="mail" class="text" type="text" placeholder="E-mail" value="<?php echo $rememberMail; ?>">
 							</div>
+                            <div class="input_outer">
+								<span class="u_user"></span>
+								<input name="password" class="text"  type="password" placeholder="Password">
+							</div>
+                            <!-- <div class="input_outer">
+								<span class="u_user"></span>
+								<input name="confirm" class="text"  type="password" placeholder="Confirm your password">
+							</div> -->
                             <div class="mb2" >
                                 <button type="submit" class="act-but submit" style="color: #FFFFFF">注册</button>
                                 <p class="more-link">

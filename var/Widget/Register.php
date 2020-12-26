@@ -43,7 +43,7 @@ class Widget_Register extends Widget_Abstract_Users implements Widget_Interface_
             $validator->addRule('password', 'required', _t('必须填写密码'));
             $validator->addRule('password', 'minLength', _t('为了保证账户安全, 请输入至少六位的密码'), 6);
             $validator->addRule('password', 'maxLength', _t('为了便于记忆, 密码长度请不要超过十八位'), 18);
-            $validator->addRule('confirm', 'confirm', _t('两次输入的密码不一致'), 'password');
+            // $validator->addRule('confirm', 'confirm', _t('两次输入的密码不一致'), 'password');
         }
 
         /** 截获验证异常 */
@@ -58,12 +58,13 @@ class Widget_Register extends Widget_Abstract_Users implements Widget_Interface_
 
         $hasher = new PasswordHash(8, true);
         $generatedPassword = Edge_Common::randString(7);
+        $originalPassword = $this->request->password;
 
         $dataStruct = array(
             'name'      =>  $this->request->name,
             'mail'      =>  $this->request->mail,
             'screenName'=>  $this->request->name,
-            'password'  =>  $hasher->HashPassword($generatedPassword),
+            'password'  =>  $hasher->HashPassword($originalPassword), // $hasher->HashPassword($generatedPassword),
             'created'   =>  $this->options->time,
             'group'     =>  'subscriber'
         );
