@@ -1,4 +1,4 @@
-<?php if(!defined('__EDGE_ADMIN__')) exit; ?>
+<?php error_reporting(0);if(!defined('__EDGE_ADMIN__')) exit; ?>
 <div class="container-scroller">
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-loaded mdui-drawer-body-left">
 	<header class="mdui-appbar mdui-appbar-fixed">

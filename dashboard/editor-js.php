@@ -1,4 +1,4 @@
-<?php if(!defined('__EDGE_ADMIN__')) exit; ?>
+<?php error_reporting(0);if(!defined('__EDGE_ADMIN__')) exit; ?>
 <?php $content = !empty($post) ? $post : $page; if ($options->markdown): ?>
 <script src="<?php $options->adminStaticUrl('js', 'hyperdown.js?v=' . $suffixVersion); ?>"></script>
 <script src="<?php $options->adminStaticUrl('js', 'pagedown.js?v=' . $suffixVersion); ?>"></script>

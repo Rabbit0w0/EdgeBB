@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 if (!defined('__EDGE_ADMIN__')) {
     exit;
 }

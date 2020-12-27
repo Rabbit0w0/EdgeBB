@@ -1,4 +1,4 @@
-<?php if(!defined('__EDGE_ADMIN__')) exit; ?>
+<?php error_reporting(0);if(!defined('__EDGE_ADMIN__')) exit; ?>
     <!-- Angular JS Toaster NOT USING -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js" ></script>
     <script src="https://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>

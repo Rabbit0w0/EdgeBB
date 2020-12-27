@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 include 'common.php';
 
 /** 获取内容 Widget */

@@ -1,4 +1,4 @@
-<?php include 'common.php'; ?>
+<?php error_reporting(0);include 'common.php'; ?>
 <?php if(!defined('__EDGE_ADMIN__')) exit; ?>
 
 		

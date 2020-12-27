@@ -1,4 +1,4 @@
-<?php if(!defined('__EDGE_ADMIN__')) exit; ?>
+<?php error_reporting(0);if(!defined('__EDGE_ADMIN__')) exit; ?>
 <?php
 if (isset($post) && $post instanceof Edge_Widget && $post->have()) {
     $fileParentContent = $post;

@@ -1,4 +1,4 @@
-<?php if(!defined('__EDGE_ADMIN__')) exit; ?>
+<?php error_reporting(0);if(!defined('__EDGE_ADMIN__')) exit; ?>
 <div class="edge-page-title">
     <h2><?php echo $menu->title; ?><?php 
     if (!empty($menu->addLink)) {
