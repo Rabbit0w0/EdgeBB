@@ -57,7 +57,7 @@ class Widget_Register extends Widget_Abstract_Users implements Widget_Interface_
         }
 
         $hasher = new PasswordHash(8, true);
-        $generatedPassword = Edge_Common::randString(7);
+        //$generatedPassword = Edge_Common::randString(7);
         $originalPassword = $this->request->password;
 
         $dataStruct = array(
@@ -77,13 +77,13 @@ class Widget_Register extends Widget_Abstract_Users implements Widget_Interface_
 
         $this->pluginHandle()->finishRegister($this);
 
-        $this->user->login($this->request->name, $generatedPassword);
+        $this->user->login($this->request->name, $originalPassword);
 
         Edge_Cookie::delete('__edge_first_run');
         Edge_Cookie::delete('__edge_remember_name');
         Edge_Cookie::delete('__edge_remember_mail');
 
-        $this->widget('Widget_Notice')->set(_t('用户 <strong>%s</strong> 已经成功注册, 密码为 <strong>%s</strong>', $this->screenName, $generatedPassword), 'success');
+        $this->widget('Widget_Notice')->set(_t('用户 <strong>%s</strong> 已经成功注册, 密码为 <strong>%s</strong>', $this->screenName/*, $generatedPassword*/), 'success');
         $this->response->redirect($this->options->adminUrl);
     }
 }

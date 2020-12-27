@@ -1,4 +1,12 @@
 <?php if(!defined('__EDGE_ADMIN__')) exit; ?>
+<!-- Angular JS Toaster NOT USING -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js" ></script>
+<script src="https://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.js"></script> -->
+<!-- End -->
+<link href="/dashboard/toast/toast.style.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/dashboard/toast/toast.script.js"></script>
 <script src="<?php $options->adminStaticUrl('js', 'jquery.js?v=' . $suffixVersion); ?>"></script>
 <script src="<?php $options->adminStaticUrl('js', 'jquery-ui.js?v=' . $suffixVersion); ?>"></script>
 <script src="<?php $options->adminStaticUrl('js', 'typecho.js?v=' . $suffixVersion); ?>"></script>
@@ -16,62 +24,25 @@
                     path = '<?php echo Edge_Cookie::getPath(); ?>';
 
                 if (!!cookies.notice && 'success|notice|error'.indexOf(cookies.noticeType) >= 0) {
-                    var head = $('.edge-head-nav'),
-                        p = $('<div class="message popup ' + cookies.noticeType + '">'
-                        + '<ul><li>' + $.parseJSON(cookies.notice).join('</li><li>') 
-                        + '</li></ul></div>'), offset = 0;
-
-                    if (head.length > 0) {
-                        p.insertAfter(head);
-                        offset = head.outerHeight();
-                    } else {
-                        p.prependTo(document.body);
-                    }
-
-                    function checkScroll () {
-                        if ($(window).scrollTop() >= offset) {
-                            p.css({
-                                'position'  :   'fixed',
-                                'top'       :   0
-                            });
-                        } else {
-                            p.css({
-                                'position'  :   'absolute',
-                                'top'       :   offset
-                            });
-                        }
-                    }
-
-                    $(window).scroll(function () {
-                        checkScroll();
-                    });
-
-                    checkScroll();
-
-                    p.slideDown(function () {
-                        var t = $(this), color = '#C6D880';
-                        
-                        if (t.hasClass('error')) {
-                            color = '#FBC2C4';
-                        } else if (t.hasClass('notice')) {
-                            color = '#FFD324';
-                        }
-
-                        t.effect('highlight', {color : color})
-                            .delay(5000).fadeOut(function () {
-                            $(this).remove();
+                    function addToast(title, content, type){
+                        $.Toast(title, content, type, {
+                            has_icon:true,
+                            has_close_btn:true,
+                            fullscreen:false,
+                            timeout:5000,
+                            sticky:false,
+                            has_progress:true,
+                            rtl:false,
                         });
-                    });
+                    }
 
-                    
+                    addToast("EdgeBB", cookies.notice, cookies.noticeType)
                     $.cookie(prefix + '__edge_notice', null, {path : path});
                     $.cookie(prefix + '__edge_notice_type', null, {path : path});
-                }
-
-                if (cookies.highlight) {
-                    $('#' + cookies.highlight).effect('highlight', 1000);
                     $.cookie(prefix + '__edge_notice_highlight', null, {path : path});
                 }
-            })();
-
+            });
+        });
+    })();
 </script>
+<!-- toast -->
