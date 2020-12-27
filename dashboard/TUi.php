@@ -87,7 +87,7 @@
 	<!--按钮2-->
    	<div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">border_color</i>
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">&#xe22b;</i>
         <div class="mdui-list-item-content">内容撰写</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>
@@ -99,7 +99,7 @@
 	<!--按钮3-->
     <div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-orange">inbox</i>
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-orange">&#xe156;</i>
         <div class="mdui-list-item-content">内容管理</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>
@@ -116,7 +116,7 @@
     <!--按钮4-->
 	<div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-pink">settings_applications</i>
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-pink">&#xe8b9;</i>
         <div class="mdui-list-item-content">更多设置</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>
@@ -130,7 +130,7 @@
     <!--按钮5-->
 	<div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">notifications_active</i>
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">&#xe7f7;</i>
         <div class="mdui-list-item-content">系统公告</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>

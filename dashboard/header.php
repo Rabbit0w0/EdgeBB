@@ -8,7 +8,7 @@ $header = '<link rel="stylesheet" href="' . Edge_Common::url('normalize.css?v=' 
 <link rel="stylesheet" href="' . Edge_Common::url('style.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('vendor.bundle.base.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('materialdesignicons.min.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/mdi/css')) . '">
-<link href="/dashboard/toast/toast.style.min.css" rel="stylesheet">
+<link href="' . Edge_Common::url('toast.style.css', $options->adminStaticUrl('toast')) . '" rel="stylesheet">
 <link rel="stylesheet" href="/dashboard/mui/css/mdui.css">
 <script src="' . Edge_Common::url('mdui.js?v=' . $suffixVersion, $options->adminStaticUrl('mui/js')) . '"></script>
 <script src="' . Edge_Common::url('toast.script.js?v=' . $suffixVersion, $options->adminStaticUrl('toast')) . '"></script>
