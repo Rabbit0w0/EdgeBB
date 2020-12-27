@@ -2,13 +2,16 @@
 if (!defined('__EDGE_ADMIN__')) {
     exit;
 }
-/** AdminMD Css and Js */
 $header = '<link rel="stylesheet" href="' . Edge_Common::url('normalize.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('grid.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('style.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('style.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('vendor.bundle.base.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('materialdesignicons.min.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/mdi/css')) . '">
+<link href="/dashboard/toast/toast.style.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/dashboard/mui/css/mdui.css">
+<script src="' . Edge_Common::url('mdui.js?v=' . $suffixVersion, $options->adminStaticUrl('mui/js')) . '"></script>
+<script src="' . Edge_Common::url('toast.script.js?v=' . $suffixVersion, $options->adminStaticUrl('toast')) . '"></script>
 <script src="' . Edge_Common::url('vendor.bundle.base.js?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/js')) . '"></script>
 <script src="' . Edge_Common::url('off-canvas.js?v=' . $suffixVersion, $options->adminStaticUrl('assets/js')) . '"></script>
 <script src="' . Edge_Common::url('hoverable-collapse.js?v=' . $suffixVersion, $options->adminStaticUrl('assets/js')) . '"></script>
@@ -32,7 +35,7 @@ $header = Edge_Plugin::factory('dashboard/header.php')->header($header);
         <meta name="robots" content="noindex, nofollow">
         <?php echo $header; ?>
     </head>
-    <body<?php if (isset($bodyClass)) {echo ' class="' . $bodyClass . '"';} ?>>
+    <body <?php if (isset($bodyClass)) {echo 'class="' . $bodyClass . '"';} ?>>
     <!--[if lt IE 9]>
         <div class="message error browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="https://www.microsoft.com/zh-cn/edge/">升级你的浏览器</a>'); ?>.</div>
     <![endif]-->

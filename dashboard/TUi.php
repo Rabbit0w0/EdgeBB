@@ -1,7 +1,5 @@
 <?php if(!defined('__EDGE_ADMIN__')) exit; ?>
 <div class="container-scroller">
-<link rel="stylesheet" href="/dashboard/mui/css/mdui.css">
-<script src="/dashboard/mui/js/mdui.js"></script>
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-loaded mdui-drawer-body-left">
 	<header class="mdui-appbar mdui-appbar-fixed">
 			<div class="mdui-toolbar mdui-color-theme">
@@ -48,7 +46,8 @@
         		</li>
 				<!--更多-->
 				<span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: &#39;#earth_menu&#39;}">
-				<i class="mdui-icon material-icons">more_vert</i></span>
+				  <i class="mdui-icon material-icons">&#xe5d4;</i>
+        </span>
 				<ul class="mdui-menu" id="earth_menu">
 					<li class="mdui-menu-item">
 						<a class="exit" href="<?php $options->logoutUrl(); ?>" class="mdui-ripple"><?php _e('登出'); ?></a>
@@ -68,15 +67,15 @@
     <div class="mdui-drawer" id="main-drawer">
   <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
   	<a href="./index.php" class="mdui-list-item">
-      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">home</i>
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">&#xe88a;</i>
       <div class="mdui-list-item-content">首页</div>
     </a>
 	<!--按钮1-->
 	<div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">settings</i>
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">&#xe8b8;</i>
         <div class="mdui-list-item-content">主控制台</div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
         <a href="./profile.php" class="mdui-list-item mdui-ripple ">个人设置</a>
@@ -90,7 +89,7 @@
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">border_color</i>
         <div class="mdui-list-item-content">内容撰写</div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
         <a href="./write-post.php" class="mdui-list-item mdui-ripple ">撰写文章</a>
@@ -102,7 +101,7 @@
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-orange">inbox</i>
         <div class="mdui-list-item-content">内容管理</div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
         <a href="./manage-posts.php" class="mdui-list-item mdui-ripple ">管理文章</a>
@@ -119,7 +118,7 @@
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-pink">settings_applications</i>
         <div class="mdui-list-item-content">更多设置</div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
         <a href="./options-general.php" class="mdui-list-item mdui-ripple ">基本设置</a>
@@ -133,7 +132,7 @@
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">notifications_active</i>
         <div class="mdui-list-item-content">系统公告</div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe313;</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
         <a onclick="notice();" class="mdui-list-item mdui-ripple">版本信息</a>
