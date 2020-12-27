@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 if (!defined('__EDGE_ROOT_DIR__')) exit;
 function themeConfig($form) {
     echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.5/G/css/S.css'/>";
