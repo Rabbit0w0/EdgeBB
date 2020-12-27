@@ -1,7 +1,7 @@
 <?php if(!defined('__EDGE_ADMIN__')) exit; ?>
 <div class="container-scroller">
-<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+<link rel="stylesheet" href="/dashboard/mui/css/mdui.css">
+<script src="/dashboard/mui/js/mdui.js"></script>
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-loaded mdui-drawer-body-left">
 	<header class="mdui-appbar mdui-appbar-fixed">
 			<div class="mdui-toolbar mdui-color-theme">
@@ -136,13 +136,13 @@
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
-        <a onclick="notice();" class="mdui-list-item mdui-ripple">AdminMD公告</a>
+        <a onclick="notice();" class="mdui-list-item mdui-ripple">版本信息</a>
       </div>
       <script type="text/javascript">
         function notice() {
             mdui.dialog({
-                title: 'AdminMD公告',
-                content: '本模板当前版本:Vesion1.3<br>开发者:Rabbit0w0',
+                title: '版本信息',
+                content: 'EdgeBB Vesion<?php _e('1.0') ?><br>开发者:Rabbit0w0',
                 buttons: [
                     {
                         text: 'OKAY'
