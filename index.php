@@ -1,10 +1,10 @@
 <?php
 /**
- * EdgeBB Forum
+ * 一直bb
  *
  * @copyright  Copyright (c) 2020 Edge team (http://www.mcedge.ink)
  * @license    MIT License
- * @version    $Id: index.php 1153 2009-07-02 10:53:22Z magike.net $
+ * @version    0.1
  */
 
 /** 载入配置支持 */
