@@ -26,6 +26,7 @@
                 				<span>我的信息</span>
             				</a>
             			</li>
+						<?php if($user->pass('contributor', true)): ?>
             			<li class="mdui-menu-item">
             			<a href="<?php $options->adminUrl('write-post.php'); ?>" class="dropdown-item">
                 			<i class="mdi mdi-pen mr-2 text-warning"></i>
@@ -42,6 +43,7 @@
 						<li class="mdui-menu-item">
                 		<span><center><?php if ($user->logged > 0) { $logged = new Edge_Date($user->logged); _e('最后登录: %s', $logged->word()); } ?></center></span>
 						</li>
+						<?php endif; ?>
             		</ul>
         		</li>
 				<!--更多-->
@@ -79,11 +81,14 @@
       </div>
       <div class="mdui-collapse-item-body mdui-list">
         <a href="./profile.php" class="mdui-list-item mdui-ripple ">个人设置</a>
+		<?php if($user->pass('contributor', true)): ?>
         <a href="./plugins.php" class="mdui-list-item mdui-ripple ">插件管理</a>
         <a href="./themes.php" class="mdui-list-item mdui-ripple ">主页外观</a>
         <a href="./backup.php" class="mdui-list-item mdui-ripple ">系统备份</a>
+		<?php endif; ?>
       </div>
     </div>
+	<?php if($user->pass('contributor', true)): ?>
 	<!--按钮2-->
    	<div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
@@ -127,6 +132,7 @@
         <a href="./options-permalink.php" class="mdui-list-item mdui-ripple ">永久链接</a>
       </div>
     </div>
+	<?php endif; ?>
     <!--按钮5-->
 	<div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">

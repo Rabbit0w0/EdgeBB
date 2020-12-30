@@ -1,5 +1,4 @@
 (function(){
-    "use strict";
     $.Toast = function(title, message, type, options){
         var defaultOptions = {
             appendTo: "body",
