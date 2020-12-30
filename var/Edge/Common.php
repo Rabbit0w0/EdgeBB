@@ -310,10 +310,12 @@ class Edge_Common
             }
         } else {
             switch ($code) {
+				/*
                 case 500:
                     $message = 'Server Error';
                     break;
-
+				*/
+				
                 case 404:
                     $message = 'Page Not Found';
                     break;
