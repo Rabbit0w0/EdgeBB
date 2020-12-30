@@ -4,7 +4,6 @@
     <script src="https://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.js"></script> -->
     <!-- End -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="<?php $options->adminStaticUrl('js', 'jquery.js?v=' . $suffixVersion); ?>"></script>
     <script src="<?php $options->adminStaticUrl('js', 'jquery-ui.js?v=' . $suffixVersion); ?>"></script>
     <script src="<?php $options->adminStaticUrl('js', 'typecho.js?v=' . $suffixVersion); ?>"></script>
@@ -34,7 +33,7 @@
                             });
                         }
 
-                        addToast("EdgeBB", cookies.notice, cookies.noticeType)
+                        addToast("EdgeBB", cookies.notice, cookies.noticeType);
                         $.cookie(prefix + '__edge_notice', null, {path : path});
                         $.cookie(prefix + '__edge_notice_type', null, {path : path});
                         $.cookie(prefix + '__edge_notice_highlight', null, {path : path});

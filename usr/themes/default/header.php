@@ -18,6 +18,7 @@
 	<?php endif; ?>
 	<link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/toastr/build/toastr.min.css" rel="stylesheet">
+	<link href="/usr/themes/default/css/float-pad.css" rel="stylesheet">
 	<script src="/usr/themes/default/skriptz/DPlayer.min.js"></script>
 
 	<style>
@@ -167,6 +168,13 @@
 </head>
 
 <body ontouchstart>
+<!-- <div id="sidebar-left">
+	<div id="float-pad" class="pad-item">
+		<img src='https://dn-qiniu-avatar.qbox.me/avatar/bdd525c3fc55d07d1132dd15989a6d44?s=56&#038;d=https%3A%2F%2Fwww.yyhy.me%2Fwp-content%2Fthemes%2FGiligili%2Fimg%2Fcomment-avatar.png&#038;r=x' srcset='https://dn-qiniu-avatar.qbox.me/avatar/bdd525c3fc55d07d1132dd15989a6d44?s=112&#038;d=https%3A%2F%2Fwww.yyhy.me%2Fwp-content%2Fthemes%2FGiligili%2Fimg%2Fcomment-avatar.png&#038;r=x 2x' class='avatar avatar-56 photo user-card-avatar' height='56' width='56'/>
+		<div id="user-card-bg"></div>
+		<a id="user-card-name">Rabbit0w0</a>
+	</div>
+</div> -->
 	<!-- 头部/pjax -->
 	<div id="pjax-container">
 		<div id="header">

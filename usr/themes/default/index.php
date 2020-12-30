@@ -3,7 +3,7 @@
  * 默认主题 For EdgeBB
  *
  *
- * @package EDGEBB
+ * @package EdgeBB
  * @author Rabbit0w0
  * @version 0.1
  * @link https://mcegde.ink/
@@ -11,6 +11,7 @@
 
  $this->need('header.php');
  ?>
+
 <div id="article" class="clear">
   <div id="article-content">
 

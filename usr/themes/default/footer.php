@@ -7,6 +7,7 @@
 			<p><a href="http://beian.miit.gov.cn/"><?php $this->options->beian(); ?></a></p>
 			<nav id="nav-2">
 				<a href="<?php Helper::options()->siteUrl()?>">首页</a>
+				<a href="<?php Helper::options()->adminUrl() ?>">管理</a>
 				<?php if ($this->options->enableIndexPage): ?>
 						<a href="<?php Helper::options()->siteUrl()?>blog">文章</a>
 				<?php endif; ?>

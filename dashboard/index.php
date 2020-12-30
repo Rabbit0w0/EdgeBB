@@ -7,7 +7,7 @@ include 'TUi.php';
 $stat = Edge_Widget::widget('Widget_Stat');
 ?>
 
-
+<?php if($user->pass('contributor', true)): ?>
 <div class="mdui-container-fluid" style="font-size:12pt;padding-left:15pt;padding-right:15pt;vertical-align:middle;padding-top:10pt;">
 <div class="page-header">
   <h3 class="page-title">
@@ -185,6 +185,9 @@ $stat = Edge_Widget::widget('Widget_Stat');
 	</div>
   </div>
 </div>
+<?php else: ?>
+<h1>Access Denied</h1>
+<?php endif; ?>
 <?php
 include 'copyright.php';
 include 'common-js.php';
