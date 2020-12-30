@@ -10,8 +10,8 @@ $header = '<link rel="stylesheet" href="' . Edge_Common::url('normalize.css?v=' 
 <link rel="stylesheet" href="' . Edge_Common::url('vendor.bundle.base.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('materialdesignicons.min.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/mdi/css')) . '">
 <link href="' . Edge_Common::url('toast.style.css', $options->adminStaticUrl('toast')) . '" rel="stylesheet">
-<link rel="stylesheet" href="/dashboard/mui/css/mdui.css">
-<script src="' . Edge_Common::url('mdui.js?v=' . $suffixVersion, $options->adminStaticUrl('mui/js')) . '"></script>
+<link rel="stylesheet" href="/dashboard/mdui/css/mdui.css">
+<script src="' . Edge_Common::url('mdui.js?v=' . $suffixVersion, $options->adminStaticUrl('mdui/js')) . '"></script>
 <script src="' . Edge_Common::url('toast.script.js?v=' . $suffixVersion, $options->adminStaticUrl('toast')) . '"></script>
 <script src="' . Edge_Common::url('vendor.bundle.base.js?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/js')) . '"></script>
 <script src="' . Edge_Common::url('off-canvas.js?v=' . $suffixVersion, $options->adminStaticUrl('assets/js')) . '"></script>
