@@ -4,7 +4,6 @@
 
 		<div id="page">
 			<div id="page-content">
-				<h2 id="page-content-title"><?php if($this->is('page','About')or$this->is('page','about')): ?><img src="https://cdn.jsdelivr.net/gh/youranreus/R@v1.0.3/G/image/about.png"><?php endif; ?><?php $this->title();?></h2>
 				<div id="page-content-article">
 					<?php
 					$db = Edge_Db::get();
