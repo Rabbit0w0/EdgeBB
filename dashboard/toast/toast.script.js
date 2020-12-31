@@ -1,6 +1,6 @@
 (function(){
     "use strict";
-    $.Toast = function(title, message, type, options){
+    function addToast(title, message, type, options){
         var defaultOptions = {
             appendTo: "body",
             stack: false,
@@ -146,7 +146,7 @@
         return $element;
     }
 
-    $.Toast.remove = function( $element ){
+    function removeToastg( $element ){
         "use strict";        
 		if($element.fadeOut)
 		{
