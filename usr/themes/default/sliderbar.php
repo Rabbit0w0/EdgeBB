@@ -1,3 +1,4 @@
+<div class="sliderbar-container">
 <div id="sliderbar" class="move_left">
   <div class="sliderbar-content-menu">
     <div id="sliderbar-profile" class="sliderbar-content">
@@ -61,6 +62,7 @@
 <div id="sliderbar-toc" class="move_right">
   <div class="toc">
   </div>
+</div>
 </div>
 <div id="sliderbar-cover" onclick="sideMenu_toggle();"></div>
 <div id="sliderbar-toc-cover" onclick="toc_toggle();"></div>

@@ -18,6 +18,42 @@
 }
 p{
 	color:white;
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+html::-webkit-scrollbar {
+	height:8px;
+	width:8px
+}
+
+html::-webkit-scrollbar-thumb {
+	-webkit-box-shadow:inset 1px 1px 0 rgba(0,0,0,0.1),inset 0 -1px 0 rgba(0,0,0,0.07);
+	background-clip:padding-box;
+	background-color:gray;
+	min-height:40px;
+	padding-top:100px;
+	border-radius:4px
+}
+
+html::-webkit-scrollbar-thumb:hover,html::-webkit-scrollbar-thumb:active {
+	background-color:#b3b3b3
+}
+
+html::-webkit-scrollbar,html *::-webkit-scrollbar {
+	height:8px;
+	width:8px;
+}
+
+html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
+	-webkit-box-shadow:inset 1px 1px 0 rgba(0,0,0,0.1),inset 0 -1px 0 rgba(0,0,0,0.07);
+	background-clip:padding-box;
+	background-color:#696969;
+	min-height:40px;
+	padding-top:100px;
+	border-radius:4px;
 }
 .h1, h1 {
 	font-size: 30px;
@@ -984,9 +1020,15 @@ p.word{
 	position: fixed;
 	left:-310px;
 	top:0;
+	height: 100%;
 	width:300px;
-	z-index:999;
+	z-index: 999;
+	transition: all .5s;
 }
+.sliderbar-container{
+	padding:25px;
+	z-index: 100;
+  }
 #sliderbar-cover{
 	display: none;
 	position: fixed;
@@ -1025,11 +1067,9 @@ p.word{
 	margin:0;
 	color:white;
 	width:auto;
-	float: left;
 }
 .sliderbar-content a{
 	text-decoration: none!important;
-	float: right;
 }
 #Sliderbar-content-1,#Sliderbar-content-2{
 	display: none;
@@ -1076,6 +1116,10 @@ p.word{
     font-weight:600;
   }
   #sliderbar-profile hr{
+	display: block;
+    width: 14%;
+    border: 0 none;
+    border-top: 3px solid #dededc;
     margin: 10px auto 0px;
   }
   #sliderbar-profile img{
