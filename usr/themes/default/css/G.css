@@ -16,14 +16,6 @@
 	-webkit-appearance:none;
   -webkit-tap-highlight-color: transparent;
 }
-p{
-	color:white;
-	display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 html::-webkit-scrollbar {
 	height:8px;
 	width:8px
@@ -129,9 +121,6 @@ html::-webkit-scrollbar {
 	width:8px
 }
 
-::-webkit-scrollbar-track-piece{
-
-}
 html::-webkit-scrollbar-thumb {
 	-webkit-box-shadow:inset 1px 1px 0 rgba(0,0,0,0.1),inset 0 -1px 0 rgba(0,0,0,0.07);
 	background-clip:padding-box;
@@ -1112,6 +1101,14 @@ p.word{
   -o-transition: color,background .5s; /* Opera */
     text-align: center;
   }
+  #sliderbar-profile p{
+	color:white;
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
   #sliderbar-profile h2{
     font-weight:600;
   }
@@ -1400,9 +1397,6 @@ p.word{
  	outline:none;
  	float: right;
  }
- .comment-children {
-
- }
 
  .comment-children .comment-children {
      padding-left: 0
@@ -1470,9 +1464,6 @@ p.word{
  	    padding: 24px;
  }
 
- #comments .comment-list li.comment-level-even {
-
- }
 
  #comments .comment-list li .comment-reply {
      float: right;
@@ -2145,9 +2136,6 @@ background   : hsla(0,0%,100%,.6);
 input#url, input#mail, input#author {
     width: 100%;
     margin-top: 10px;
-}
-#comment-loading {
-
 }
 #m_menu, #m_top, #m_search,#m_toc{
     position: fixed;
