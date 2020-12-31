@@ -141,7 +141,7 @@ function imageinfo(){
 					}
 					$(this).addClass("lazyload");
 					$(this).attr('data-original',$(this).attr("src"));
-					$(this).attr('src','https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.5/G/image/loading2.gif');
+					$(this).attr('src','https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.5/G/IMG/loading2.gif');
 					$(this).after('<span class="imageinfo">'+ $(this).attr("title") +'</span>');
 		 });
 	});

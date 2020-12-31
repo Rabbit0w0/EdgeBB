@@ -2,7 +2,7 @@
 error_reporting(0);
 if (!defined('__EDGE_ROOT_DIR__')) exit;
 function themeConfig($form) {
-    echo "<link rel='stylesheet' href='/usr/themes/default/G/css/S.css'/>";
+    echo "<link rel='stylesheet' href='/usr/themes/default/css/S.css'/>";
     echo "<h2>主题设置</h2>";
     $favicon = new Edge_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('图标') , _t(''));
     $form->addInput($favicon);
@@ -182,7 +182,7 @@ class Gx {
 
     public static function addButton()
     {
-      echo '  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.7/G/css/OwO.min.css?v=2" rel="stylesheet" />';
+      echo '  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.7/G/CSS/OwO.min.css?v=2" rel="stylesheet" />';
 
         echo '
         <style>
@@ -211,7 +211,7 @@ class Gx {
         </style>
         ';
 
-        echo '<script src="/usr/themes/default/G/skriptz/editor.js"></script>';
+        echo '<script src="/usr/themes/default/skriptz/editor.js"></script>';
 
 
     }
