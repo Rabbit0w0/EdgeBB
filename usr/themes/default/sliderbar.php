@@ -1,5 +1,34 @@
 <div id="sliderbar" class="move_left">
   <div class="sliderbar-content-menu">
+    <div id="sliderbar-profile" class="sliderbar-content">
+          <?php if($this->options->avatarUrl != ''): ?>
+            <h2><a href="<?php Helper::options()->siteUrl()?>"><img src="<?php echo $this->options->avatarUrl; ?>"/></a></h2>
+          <?php else: ?>
+            <h2><a href="<?php Helper::options()->siteUrl()?>"><img src="https://sdn.geekzu.org/avatar/<?php echo md5($this->author->mail); ?>"/></a></h2>
+          <?php endif; ?>
+          <h2><a href="<?php Helper::options()->siteUrl()?>"><?php $this->options->title(); ?></a></h2>
+          <p><?php $this->options->description() ?></p>
+          <div id="sliderbar-profile-social">
+            <?php if($this->options->bilibiliUrl != ''): ?>
+              <a href="<?php echo $this->options->bilibiliUrl; ?>"><img src="<?php $this->options->themeUrl('ico/bilibili.svg'); ?>"></img></a>
+            <?php endif; ?>
+
+            <?php if($this->options->GHUrl != ''): ?>
+              <a href="<?php echo $this->options->GHUrl; ?>"><img class="github-ico" src="<?php $this->options->themeUrl('ico/github-2.svg'); ?>"></img></a>
+            <?php endif; ?>
+
+            <?php if($this->options->TGUrl != ''): ?>
+              <a href="<?php echo $this->options->TGUrl; ?>"><img src="<?php $this->options->themeUrl('ico/telegram.svg'); ?>"></img></a>
+            <?php endif; ?>
+
+            <?php if($this->options->weiboUrl != ''): ?>
+              <a href="<?php echo $this->options->weiboUrl; ?>"><img src="<?php $this->options->themeUrl('ico/weibo.svg'); ?>"></img></a>
+            <?php endif; ?>
+        </div>
+      <hr>
+    </div>
+  </div>
+  <div class="sliderbar-content-menu">
     <div class="Sliderbar-content clear">
       <div class="Sliderbar-content-switch clear">
         <h2>CATEGORIES</h2>

@@ -26,7 +26,17 @@ function themeConfig($form) {
     $form->addInput($headerLOGO);
     $Links = new Edge_Widget_Helper_Form_Element_Textarea('Links', NULL, NULL, _t('友情链接'), _t('按照格式输入链接信息，格式：<br><strong>链接名称,链接地址,链接描述,链接分类</strong><br>不同信息之间用英文逗号“,”分隔，例如：<br><strong>Edge,https://mcedge.ink/,寻找有趣的灵魂,好朋友,https://xxx.xxx.com/avatar.jpg</strong><br>多个链接换行即可，一行一个'));
     $form->addInput($Links);
+    $avatarUrl = new Typecho_Widget_Helper_Form_Element_Text('avatarUrl', NULL, NULL, _t('侧栏头像地址'), _t('填入一个你的头像 URL 地址, 留空则使用gravatar头像'));
+    $form->addInput($avatarUrl);
+    $bilibiliUrl = new Typecho_Widget_Helper_Form_Element_Text('bilibiliUrl', NULL, NULL, _t('侧栏B站地址'), _t('留空则不显示图标'));
+    $form->addInput($bilibiliUrl);
+    $weiboUrl = new Typecho_Widget_Helper_Form_Element_Text('weiboUrl', NULL, NULL, _t('侧栏微博地址'), _t('留空则不显示图标'));
+    $form->addInput($weiboUrl);
+    $TGUrl = new Typecho_Widget_Helper_Form_Element_Text('TGUrl', NULL, NULL, _t('侧栏Telegram地址'), _t('留空则不显示图标'));
+    $form->addInput($TGUrl);
 
+    $GHUrl = new Typecho_Widget_Helper_Form_Element_Text('GHUrl', NULL, NULL, _t('侧栏Github地址'), _t('留空则不显示图标'));
+    $form->addInput($GHUrl);
     $enableIndexPage = new Edge_Widget_Helper_Form_Element_Radio('enableIndexPage', array(
         '1' => _t('cool') ,
         '0' => _t('nope')

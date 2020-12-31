@@ -1,7 +1,12 @@
 @font-face {
    font-family: 'poppin';
-   src : url('https://cdn.jsdelivr.net/gh/youranreus/R@v1.0.3/G/css/poppin.ttf');
+   src : url('https://cdn.jsdelivr.net/gh/youranreus/R@v1.0.3/G/CSS/poppin.ttf');
  }
+
+ @font-face {
+	font-family: 'google';
+	src : url('https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.1/fonts/GoogleSansBold.ttf');
+  }
  /**
   * 基本样式
   */
@@ -11,9 +16,35 @@
 	-webkit-appearance:none;
   -webkit-tap-highlight-color: transparent;
 }
-html {
-
+p{
+	color:white;
 }
+.h1, h1 {
+	font-size: 30px;
+  }
+  
+  .h2, h2 {
+	font-size: 23px;
+  }
+  
+  .h3, h3 {
+	font-size: 20px;
+  }
+  
+  .h4, h4 {
+	font-size: 16px;
+	text-transform: uppercase;
+  }
+  
+  .h5, h5 {
+	font-size: 14px;
+	text-transform: uppercase;
+  }
+  
+  .h6, h6 {
+	font-size: 12px;
+	text-transform: uppercase;
+  }
 
 body {
 	padding: 0px;
@@ -984,7 +1015,10 @@ p.word{
 	border-radius: 15px;
 }
 .sliderbar-content{
-	padding: 24px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom:30px;
+    overflow: hidden;
 }
 .sliderbar-content h2{
 	padding:0;
@@ -994,6 +1028,7 @@ p.word{
 	float: left;
 }
 .sliderbar-content a{
+	text-decoration: none!important;
 	float: right;
 }
 #Sliderbar-content-1,#Sliderbar-content-2{
@@ -1026,6 +1061,43 @@ p.word{
   -webkit-backdrop-filter: blur(40px);
   border-radius: 15px;
 }
+  #sliderbar-profile{
+	font-family: 'google',"微軟正黑體","Droid Serif",Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Source Han Sans CN","WenQuanYi Micro Hei","Microsoft Yahei",serif;
+	-webkit-appearance:none;
+  -webkit-tap-highlight-color: transparent;
+
+  transition: color,background .5s;
+  -moz-transition: color,background .5s; /* Firefox 4 */
+  -webkit-transition: color,background .5s; /* Safari 和 Chrome */
+  -o-transition: color,background .5s; /* Opera */
+    text-align: center;
+  }
+  #sliderbar-profile h2{
+    font-weight:600;
+  }
+  #sliderbar-profile hr{
+    margin: 10px auto 0px;
+  }
+  #sliderbar-profile img{
+    border-radius: 50%;
+    height:5rem;
+  }
+  #sliderbar-profile a{
+	  color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin:0 10px;
+  }
+  #sliderbar-profile-social{
+    margin-top:10px;
+  }
+  #sliderbar-profile-social a img{
+    width: 25px;
+    height: 25px;
+  }
+  .github-ico{
+      background: rgba(0,0,0,0.4);
+  }
 .toc{
   margin:20px 0;
 }
