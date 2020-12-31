@@ -2,7 +2,7 @@
 error_reporting(0);
 if (!defined('__EDGE_ROOT_DIR__')) exit;
 function themeConfig($form) {
-    echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.5/G/css/S.css'/>";
+    echo "<link rel='stylesheet' href='/usr/themes/default/G/css/S.css'/>";
     echo "<h2>主题设置</h2>";
     $favicon = new Edge_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('图标') , _t(''));
     $form->addInput($favicon);
@@ -211,7 +211,7 @@ class Gx {
         </style>
         ';
 
-        echo '<script src="https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.7/G/skriptz/editor.js"></script>';
+        echo '<script src="/usr/themes/default/G/skriptz/editor.js"></script>';
 
 
     }
@@ -462,7 +462,7 @@ function emotionContent($content)
     //$Parsedown = new Parsedown();
     //$content =  $Parsedown->text($content);
     //表情解析
-    $fcontent = preg_replace('#\@\((.*?)\)#','<img src="https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.5/G/image/bq/$1.png" class="bq">',$content);
+    $fcontent = preg_replace('#\@\((.*?)\)#','<img src="/usr/themes/default/image/bq/$1.png" class="bq">',$content);
     //感谢Maicong大佬的短代码解析QwQ
     $fcontent = do_shortcode($fcontent);
     //输出最终结果
@@ -480,7 +480,7 @@ function shortcodeContent($content)
 {
     $Parsedown = new Parsedown();
     $fcontent =  $Parsedown->text($content);
-    $fcontent = preg_replace('#\@\((.*?)\)#','<img src="https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.5/G/image/bq/$1.png" class="bq">',$fcontent);
+    $fcontent = preg_replace('#\@\((.*?)\)#','<img src="/usr/themes/default/image/bq/$1.png" class="bq">',$fcontent);
     return $fcontent;
 }
 
