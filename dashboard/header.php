@@ -16,6 +16,7 @@ $header = '<link rel="stylesheet" href="' . Edge_Common::url('normalize.css?v=' 
 <script src="' . Edge_Common::url('vendor.bundle.base.js?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/js')) . '"></script>
 <script src="' . Edge_Common::url('off-canvas.js?v=' . $suffixVersion, $options->adminStaticUrl('assets/js')) . '"></script>
 <script src="' . Edge_Common::url('hoverable-collapse.js?v=' . $suffixVersion, $options->adminStaticUrl('assets/js')) . '"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
 <!--[if lt IE 9]>
 <script src="' . Edge_Common::url('html5shiv.js?v=' . $suffixVersion, $options->adminStaticUrl('js')) . '"></script>
