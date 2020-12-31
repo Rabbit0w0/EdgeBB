@@ -16,6 +16,9 @@
 	-webkit-appearance:none;
   -webkit-tap-highlight-color: transparent;
 }
+pre{
+	background-color: #eee;
+}
 html::-webkit-scrollbar {
 	height:8px;
 	width:8px
