@@ -303,6 +303,9 @@ class Edge_Widget_Helper_Layout
         if (!$this->_close && $this->_tagName) {
             echo ">\n";
         }
+        // if($this->_isBeautyCheckBox){
+        //     echo "<svg viewBox=\"-9 -9 43 35.191\" width=\"43\" height=\"35\"><path id=\"check-icon\" d=\" M 0 9 Q 8 17 8 17 Q 8 17 25 0\" fill=\"none\" stroke-width=\"6\" stroke=\"rgb(0,0,0)\" stroke-linecap=\"round\" /></svg>";
+        // }
     }
 
     /**
@@ -313,9 +316,7 @@ class Edge_Widget_Helper_Layout
      */
     public function end()
     {
-        if($this->_isBeautyCheckBox){
-            echo "<svg viewBox=\"-9 -9 43 35.191\" width=\"43\" height=\"35\"><path id=\"check-icon\" d=\" M 0 9 Q 8 17 8 17 Q 8 17 25 0\" fill=\"none\" stroke-width=\"6\" stroke=\"rgb(0,0,0)\" stroke-linecap=\"round\" /></svg>";
-        }
+
         if ($this->_tagName) {
             echo $this->_close ? " />\n" : "</{$this->_tagName}>\n";
         }

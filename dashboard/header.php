@@ -6,7 +6,6 @@ if (!defined('__EDGE_ADMIN__')) {
 $header = '<link rel="stylesheet" href="' . Edge_Common::url('normalize.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('grid.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('style.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
-<link rel="stylesheet" href="' . Edge_Common::url('checkbox.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('style.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('vendor.bundle.base.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('materialdesignicons.min.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/mdi/css')) . '">
@@ -22,7 +21,7 @@ $header = '<link rel="stylesheet" href="' . Edge_Common::url('normalize.css?v=' 
 <script src="' . Edge_Common::url('html5shiv.js?v=' . $suffixVersion, $options->adminStaticUrl('js')) . '"></script>
 <script src="' . Edge_Common::url('respond.js?v=' . $suffixVersion, $options->adminStaticUrl('js')) . '"></script>
 <![endif]-->';
-
+//<link rel="stylesheet" href="' . Edge_Common::url('checkbox.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 /** 注册一个初始化插件 */
 $header = Edge_Plugin::factory('dashboard/header.php')->header($header);
 

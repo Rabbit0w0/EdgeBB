@@ -4,7 +4,7 @@ input[type="checkbox"] {
 input[type="checkbox"] + .label {
   position: relative;
   padding-left: 1.7em;
-  color: #ffffff;
+  color: #00acc1;
   font-size: 3.125rem;
   cursor: pointer;
 }
@@ -15,7 +15,7 @@ input[type="checkbox"] + .label::before {
   left: 0;
   width: 1em;
   height: 1em;
-  border: 3px solid #ffffff;
+  border: 3px solid #00acc1;
   border-radius: 0.1em;
 }
 input[type="checkbox"] + .label::after {
@@ -26,7 +26,7 @@ input[type="checkbox"] + .label::after {
   width: 0.92em;
   height: 0.92em;
   transform: scale(0);
-  background-color: #ffffff;
+  background-color: #00acc1;
   border-radius: 0.02em;
   transition: all 0.2s linear;
   opacity: 0;
@@ -38,7 +38,7 @@ input[type="checkbox"] + .label svg {
   z-index: 1;
 }
 input[type="checkbox"] + .label #check-icon {
-  stroke: #00acc1;
+  stroke: #ffffff;
   stroke-dasharray: 36;
   stroke-dashoffset: 36;
 }
