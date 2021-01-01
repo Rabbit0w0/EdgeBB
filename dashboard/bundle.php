@@ -1,4 +1,4 @@
-<?php   
+<?php
 $file="./_bundles";
 $temp=scandir($file);
 ?>

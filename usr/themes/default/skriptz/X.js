@@ -437,4 +437,4 @@ function ajaxc(){
 		});
 }
 console.info(" %c Powered by Edge ", 'color:#fadfa3;background:#030307;padding:5px 0;');
-console.info(" %c made with ❤ by youranreus ",'color: #fadfa3; background: #030307; padding:5px 0;')
+console.info(" %c made with ❤ by Rabbit0w0 ",'color: #fadfa3; background: #030307; padding:5px 0;')

@@ -3,7 +3,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
     mode: "production",
     entry: {
-        "./dashboard":"./dashboard/style/login_index.js"
+        "./dashboard":"./dashboard/style/login_index.js"/*,
+        "./usr/themes/default":"./usr/themes/default/skriptz/X.js"*/
     },
     output: {
         path: path.resolve(__dirname, "./dashboard/_bundles"),

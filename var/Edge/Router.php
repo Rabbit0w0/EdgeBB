@@ -142,7 +142,8 @@ class Edge_Router
                     return;
 
                 } catch (Exception $e) {
-                    if (404 == $e->getCode()) {
+                    //什么阴间玩意
+                    if ($e->getCode() == 404) {
                         Edge_Widget::destory($route['widget']);
                         continue;
                     }
