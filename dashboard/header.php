@@ -6,6 +6,7 @@ if (!defined('__EDGE_ADMIN__')) {
 $header = '<link rel="stylesheet" href="' . Edge_Common::url('normalize.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('grid.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('style.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
+<link rel="stylesheet" href="' . Edge_Common::url('checkbox.css?v=' . $suffixVersion, $options->adminStaticUrl('css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('style.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('vendor.bundle.base.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/css')) . '">
 <link rel="stylesheet" href="' . Edge_Common::url('materialdesignicons.min.css?v=' . $suffixVersion, $options->adminStaticUrl('assets/vendors/mdi/css')) . '">

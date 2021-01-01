@@ -50,7 +50,13 @@ class Edge_Widget_Helper_Layout
      * @var boolean
      */
     private $_close = false;
-
+    //特判是不是复选框
+    /**
+     * 是否是漂亮复选框
+     * @access private
+     * @var boolean
+     */
+    private $_isBeautyCheckBox = false;
     /**
      * 是否强制自闭合
      *
@@ -83,10 +89,10 @@ class Edge_Widget_Helper_Layout
      * @param array $attributes 属性列表
      * @return void
      */
-    public function __construct($tagName = 'div', array $attributes = NULL)
+    public function __construct($tagName = 'div', array $attributes = NULL, $bCheckBox = false)
     {
         $this->setTagName($tagName);
-
+        $this->setBeautyCheckBox($bCheckBox);
         if (!empty($attributes)) {
             foreach ($attributes as $attributeName => $attributeValue) {
                 $this->setAttribute($attributeName, $attributeValue);
@@ -120,7 +126,16 @@ class Edge_Widget_Helper_Layout
         unset($this->_items[array_search($item, $this->_items)]);
         return $this;
     }
-
+    /**
+     * 设置是不是bcb
+     * 
+     * @access protected
+     * @return void
+     */
+    protected function setBeautyCheckBox($isornot = false)
+    {
+        $this->_isBeautyCheckBox = $isornot;
+    }
     /**
      * getItems  
      * 
@@ -279,7 +294,6 @@ class Edge_Widget_Helper_Layout
     {
         /** 输出标签 */
         echo $this->_tagName ? "<{$this->_tagName}" : NULL;
-
         /** 输出属性 */
         foreach ($this->_attributes as $attributeName => $attributeValue) {
             echo " {$attributeName}=\"{$attributeValue}\"";
@@ -299,6 +313,9 @@ class Edge_Widget_Helper_Layout
      */
     public function end()
     {
+        if($this->_isBeautyCheckBox){
+            echo "<svg viewBox=\"-9 -9 43 35.191\" width=\"43\" height=\"35\"><path id=\"check-icon\" d=\" M 0 9 Q 8 17 8 17 Q 8 17 25 0\" fill=\"none\" stroke-width=\"6\" stroke=\"rgb(0,0,0)\" stroke-linecap=\"round\" /></svg>";
+        }
         if ($this->_tagName) {
             echo $this->_close ? " />\n" : "</{$this->_tagName}>\n";
         }

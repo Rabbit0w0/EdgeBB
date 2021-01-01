@@ -49,7 +49,7 @@ class Edge_Widget_Helper_Form_Element_Checkbox extends Edge_Widget_Helper_Form_E
             ->setAttribute('value', $value)
             ->setAttribute('id', $id));
 
-            $labelItem = new Edge_Widget_Helper_Layout('label');
+            $labelItem = new Edge_Widget_Helper_Layout('label', NULL, true);
             $item->addItem($labelItem->setAttribute('for', $id)->html($label));
             $this->container($item);
         }
