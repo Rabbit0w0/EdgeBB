@@ -1,11 +1,13 @@
-
 const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
-    entry: "./dashboard/style/sky.js",
+    mode: "production",
+    entry: {
+        "./dashboard":"./dashboard/style/login_index.js"
+    },
     output: {
         path: path.resolve(__dirname, "./dashboard/_bundles"),
-        filename: "bundle.[hash:8].js" 
+        filename: "bundle.[chunkhash:8].js" 
     },
     optimization: {
         minimize: true,
