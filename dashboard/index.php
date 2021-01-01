@@ -164,7 +164,7 @@ $stat = Edge_Widget::widget('Widget_Stat');
 					<div class="mdui-list-item-content" style="color:#FF5252;"><?php $comments->date('m.d'); ?></div>
     				<div class="mdui-list-item">
     				<img src="<?php $email =$comments->mail; if($email){if(strpos($email,'@qq.com') !==false){$email=str_replace('@qq.com','',$email);echo '//q1.qlogo.cn/g?b=qq&nk='.$email.'&s=100';}else{$email= md5($email);echo Edge_Common::gravatarUrl($comments->mail, 220, 'X', 'mm', $request->isSecure());}}else{echo '//cdn.v2ex.com/gravatar/null?';} ?>" alt="Image placeholder" class="avatar rounded-circle" style="width:35px;height:35px;margin-right:5px;"><br>
-    				<?php $comments->author(true); ?>
+    				<a><?php $comments->author(true); ?></a>
     				</div>
     			<a href="<?php $comments->permalink(); ?>" class="title">
     			<div class="mdui-list-item" style="color:#3F51B5;"><?php $comments->excerpt(35, '...'); ?></div>
