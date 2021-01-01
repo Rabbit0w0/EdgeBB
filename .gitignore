@@ -3,5 +3,5 @@ _bundles
 nginx.htaccess
 package-lock.json
 .htaccess
-.config.inc.php
+config.inc.php
 *.db
