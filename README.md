@@ -6,3 +6,4 @@ __EdgeBB Blog System__
 
 EdgeBB is a modern blog system.
 
+Welcome to my blog: http://mcegde.ink/

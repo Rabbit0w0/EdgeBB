@@ -9,7 +9,7 @@
 
 /** 载入配置支持 */
 if (!defined('__EDGE_ROOT_DIR__') && !@include_once 'config.inc.php') {
-    file_exists('./install.php') ? header('Location: install.php') : print('Missing Config File');
+    file_exists('./install.php') ? header('Location: install.php') : _e('FATAL: Missing Config File');
     exit;
 }
 
