@@ -63,7 +63,9 @@ $bodyClass = 'body-100';
 			</div>
 		</div>
 		<!-- 容器 -->
-		<script src="./style/sky.js"></script>
+		<?php
+		include 'bundle.php';
+		?>
 </body></html>
 <?php 
 include 'common-js.php';
