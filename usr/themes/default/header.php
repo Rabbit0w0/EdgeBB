@@ -20,6 +20,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/toastr/build/toastr.min.css" rel="stylesheet">
 	<link href="/usr/themes/default/css/float-pad.css" rel="stylesheet">
 	<script src="/usr/themes/default/skriptz/DPlayer.min.js"></script>
+	<script src="/usr/themes/default/skriptz/lgBox.js"></script>
 
 	<style>
 		<?php if ($this->options->IndexStyle == 1): ?>

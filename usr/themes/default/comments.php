@@ -64,7 +64,7 @@ echo $commentClass;
 
         <?php if($this->allow('comment')): ?>
           <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form">
-            <img id="comment-loading" src="/usr/themes/default/image/loading.gif"></img>
+            <img id="comment-loading" src="https://cdn.jsdelivr.net/gh/youranreus/R@v1.0.3/G/IMG/loading.gif"></img>
             <div class="cancel-comment-reply clear">
                 <?php $comments->cancelReply(); ?>
             </div>
