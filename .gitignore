@@ -1,2 +1,7 @@
 node_modules
 _bundles
+nginx.htaccess
+package-lock.json
+.htaccess
+.config.inc.php
+*.db
