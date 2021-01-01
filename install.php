@@ -5,7 +5,7 @@
  *
  * @copyright  Copyright (c) 2020 Edge team (http://www.mcedge.ink)
  * @license    MIT License
- * @version    0.1
+ * @version    1.2.1
  */
  
 /** 定义根目录 */
@@ -149,7 +149,7 @@ function _u() {
 }
 
 $options = new stdClass();
-$options->generator = 'Edge ' . Edge_Common::VERSION;
+$options->generator = 'EdgeBB ' . Edge_Common::VERSION;
 list($soft, $currentVersion) = explode(' ', $options->generator);
 
 $options->software = $soft;

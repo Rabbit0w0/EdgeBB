@@ -61,7 +61,7 @@ function _n($single, $plural, $number) {
 class Edge_Common
 {
     /** 程序版本 */
-    const VERSION = '1.2/18.10.23';
+    const VERSION = '1.2.1/0.17.14';
 
     /**
      * 允许的属性

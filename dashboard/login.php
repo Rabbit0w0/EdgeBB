@@ -63,9 +63,6 @@ $bodyClass = 'body-100';
 			</div>
 		</div>
 		<!-- 容器 -->
-		<script src="./style/TweenLite.js"></script>
-		<script src="./style/EasePack.js"></script>
-		<script src="./style/rAF.js"></script>
 		<script src="./style/sky.js"></script>
 </body></html>
 <?php 

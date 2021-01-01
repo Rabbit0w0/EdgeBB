@@ -147,7 +147,7 @@
         function notice() {
             mdui.dialog({
                 title: '版本信息',
-                content: 'EdgeBB Vesion<?php _e('1.0') ?><br>开发者:Rabbit0w0',
+                content: 'EdgeBB Vesion<?php _e($options->version) ?><br>开发者:Rabbit0w0',
                 buttons: [
                     {
                         text: 'OKAY'
