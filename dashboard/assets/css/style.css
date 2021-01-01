@@ -8199,6 +8199,14 @@ button.bg-dark:focus {
 .w-100 {
   width: 100% !important; }
 
+.textarea-style {
+  border-radius:5pt;
+  height:60pt;
+  margin-bottom: 2vh;
+  width:100%;
+  overflow-x:hidden;
+  font-family:"Sans-serif"; }
+
 .w-auto {
   width: auto !important; }
 
@@ -13362,7 +13370,7 @@ h2 a {
     color: white;
 }
 
-/*¹ö¶¯Ìõ¶¨ÒåÉèÖÃ*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -13371,20 +13379,20 @@ h2 a {
 ::-webkit-scrollbar-track {
     box-shadow: 0px 1px 3px rgba(0,0,0,0.3) inset;
 
-    /*¹ö¶¯ÌõµÄ±³¾°ÇøÓòµÄÔ²½Ç*/
+    /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½*/
     border-radius: 10px;  
 
-    /*¹ö¶¯ÌõµÄ±³¾°ÑÕÉ«*/
+    /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½É«*/
     background-color: #ddd;
 }
 
 ::-webkit-scrollbar-thumb {
     box-shadow: 0px 1px 3px rgba(0,0,0,0.3) inset;
 
-    /*¹ö¶¯ÌõµÄÔ²½Ç*/
+    /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½*/
     border-radius: 10px;  
 
-    /*¹ö¶¯ÌõµÄ±³¾°ÑÕÉ«*/
+    /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½É«*/
     background-color: #4d7cff;
 	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }

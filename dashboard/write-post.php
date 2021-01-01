@@ -40,10 +40,11 @@ Edge_Widget::widget('Widget_Contents_Post_Edit')->to($post);
 				<label for="slug" class="sr-only"><?php _e('网址缩略名'); ?></label>
 				<?php echo preg_replace("/\{slug\}/i", $input, $permalink); ?>
 			</p>
-			<p>
+			<div style="position:relative">
 				<label for="text" class="sr-only"><?php _e('文章内容'); ?></label>
-				<textarea style="height: <?php $options->editorSize(); ?>px; margin-top:5px;" autocomplete="off" id="text" name="text" class="w-100 mono"><?php echo htmlspecialchars($post->text); ?></textarea>
-			</p>
+				<textarea style="height: <?php $options->editorSize(); ?>px; margin-top:5px;" autocomplete="off" id="text" name="text" class="w-100 mono textarea-style" onkeyup="setLength(this,'wordsLength');"><?php echo htmlspecialchars($post->text); ?></textarea>
+				<span id="wordsLength" style="position:absolute; right:0.25cm; bottom:0.8cm;font-size:12px; color:#BDCADA">0</span>
+			</div>
 			
 			<?php include 'custom-fields.php'; ?>
 
