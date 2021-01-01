@@ -486,9 +486,10 @@ function shortcodeContent($content)
 
 /**
 * 字数统计
-* #author lushangkan
-* #web:cutemc.cn
+* @author lushangkan
+* @link cutemc.cn
 */
+// Rabbit0w0 also contributed
 Edge_Plugin::factory('dashboard/write-post.php')->bottom = array('wordcount', 'one');
 Edge_Plugin::factory('dashboard/write-page.php')->bottom = array('wordcount', 'one');
 class wordcount {
@@ -497,21 +498,35 @@ class wordcount {
     ?>
 <script language="javascript">
     function setLength(obj,id){
-    var leng=id;
-    var parser = new HyperDown,
-    html = parser.makeHtml(obj.value);
-    var texthtml = document.createElement("div");
-    texthtml.innerHTML = html;
-    var textlist = texthtml.getElementsByTagName("p");
-    var text;
-    if(textlist.length==0){
-        document.getElementById(leng).innerHTML=0+"";
-    }else{
-    for(var i=0;i!=textlist.length;i++){
-        text = text+textlist.item(i).textContent;
-    }
-    document.getElementById(leng).innerHTML=text.length-9+"";
-    }
+        console.log("debug: refreshed size");
+        var leng=id;
+        var parser = new HyperDown,
+        html = parser.makeHtml(obj.value);
+        var texthtml = document.createElement("div");
+        texthtml.innerHTML = html;
+        var textlist = texthtml.getElementsByTagName("p");
+        var text,titlesize;
+        for(var size=1;size<=6;size++){
+            var elementName="h"+(size+"");
+            // console.log(elementName);
+            tlist = texthtml.getElementsByTagName(elementName);
+            if(tlist.length == 0){
+                titlesize=0;
+            }
+            else{
+                for(var i=0;i!=tlist.length;i++){
+                    titlesize+=(tlist.item(i).textContent).length;
+                }
+            }
+        }
+        if(textlist.length==0){
+            document.getElementById(leng).innerHTML=0+titlesize+"";
+        }else{
+            for(var i=0;i!=textlist.length;i++){
+                text = text+textlist.item(i).textContent;
+            }
+            document.getElementById(leng).innerHTML=text.length-9+titlesize+"";
+        }
     }
 </script>
 <?php
