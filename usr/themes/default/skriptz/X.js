@@ -18,11 +18,11 @@ function switchNightMode(){
     if(night == '0'){
         document.querySelector('link[title="dark"]').disabled = true;
         document.querySelector('link[title="dark"]').disabled = false;
-        document.cookie = "night=1;path=/"
+		document.cookie = "night=1;path=/";
         toastr.info('夜间模式开启');
     }else{
         document.querySelector('link[title="dark"]').disabled = true;
-        document.cookie = "night=0;path=/"
+		document.cookie = "night=0;path=/";
         toastr.info('夜间模式关闭');
     }
 }
