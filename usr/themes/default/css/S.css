@@ -8,9 +8,10 @@
  /**
   * 清除自带样式
   */
-.edge-option-tabs,.edge-page-title,.edge-foot{
+
+/* .edge-option-tabs,.edge-page-title,.edge-foot{
   display: none!important;
-}
+} */
 .edge-option{
   padding:24px;
   margin:20px 0;
