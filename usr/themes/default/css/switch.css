@@ -1,69 +1,55 @@
-/*开关的大小*/
-.switch-container {
-    height: 15px;
-    width: 30px;
-}
-
-/*设置checkbox不显示*/
-.switch {
-    display: none;
-}
-
-/*设置label标签为椭圆状*/
-label {
-    display: block;
-    background-color: #EEEEEE;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 25px;
-}
-
-/*在label标签内容之前添加如下样式，形成一个未选中状态*/
-label:before {
-    content: '';
-    display: block;
-    border-radius: 25px;
-    height: 100%;
-    width: 15px;
-    background-color: white;
-    opacity: 1;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
-    -webkit-transition: all 0.2s ease;
-}
-
-/*在label标签内容之后添加如下样式，形成一个选中状态*/
-label:after {
-    position: relative;
-    top: -15px;
-    left: 15px;
-    content: '';
-    display: block;
-    border-radius: 25px;
-    height: 100%;
-    width: 15px;
-    background-color: white;
-    opacity: 0;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
-    -webkit-transition: all 0.2s ease;
-}
-
-
-/* ~ 兄弟选择符。
-   p~ul ：位于 p 元素之后的所有 ul 元素
-*/
-
-/*选中后，选中样式显示*/
-#switch:checked~label:after {
-    opacity: 1;
-}
-
-/*选中后，未选中样式消失*/
-#switch:checked~label:before {
-    opacity: 0;
-}
-
-/*选中后label的背景色改变*/
-#switch:checked~label {
-    background-color: green;
-}
+      .mui-switch { 
+        width: 70px; 
+        height: 31px; 
+        position: relative; 
+        border: 1px solid #dfdfdf; 
+        background-color: #fdfdfd; 
+        box-shadow: #dfdfdf 0 0 0 0 inset; 
+        border-radius: 20px; 
+        border-top-left-radius: 20px; 
+        border-top-right-radius: 20px; 
+        border-bottom-left-radius: 20px; 
+        border-bottom-right-radius: 20px; 
+        background-clip: content-box; 
+        display: inline-block; 
+        -webkit-appearance: none; 
+        user-select: none; 
+        outline: none;        
+    } 
+        .mui-switch:before { 
+            content: ''; 
+            width: 29px; 
+            height: 29px; 
+            position: absolute; 
+            top: 0px; 
+            left: 0; 
+            border-radius: 20px; 
+            border-top-left-radius: 20px; 
+            border-top-right-radius: 20px; 
+            border-bottom-left-radius: 20px; 
+            border-bottom-right-radius: 20px; 
+            background-color: #fff; 
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);        
+        } 
+        .mui-switch:checked { 
+            border-color: #64bd63; 
+            box-shadow: #64bd63 0 0 0 16px inset; 
+            background-color: #64bd63;        
+        } 
+        .mui-switch:checked:before { 
+            left: 40px;        
+        } 
+        .mui-switch.mui-switch-animbg { 
+            transition: background-color ease 0.4s;        
+        } 
+        .mui-switch.mui-switch-animbg:before { 
+            transition: left 0.3s;        
+        } 
+        .mui-switch.mui-switch-animbg:checked { 
+            box-shadow: #dfdfdf 0 0 0 0 inset; 
+            background-color: #64bd63; 
+            transition: border-color 0.4s, background-color ease 0.4s;        
+        } 
+        .mui-switch.mui-switch-animbg:checked:before { 
+            transition: left 0.3s;        
+        }
