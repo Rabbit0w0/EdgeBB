@@ -498,20 +498,11 @@ class wordcount {
 <script language="javascript">
     function setLength(obj,id){
     var leng=id;
-    var parser = new HyperDown,
+    var parser = new HyperDown;
     html = parser.makeHtml(obj.value);
     var texthtml = document.createElement("div");
     texthtml.innerHTML = html;
-    var textlist = texthtml.getElementsByTagName("p");
-    var text;
-    if(textlist.length==0){
-        document.getElementById(leng).innerHTML=0+"";
-    }else{
-    for(var i=0;i!=textlist.length;i++){
-        text = text+textlist.item(i).textContent;
-    }
-    document.getElementById(leng).innerHTML=text.length-9+"";
-    }
+    document.getElementById(leng).innerHTML=texthtml.textContent.length+"";
     }
 </script>
 <?php
