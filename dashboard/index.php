@@ -9,11 +9,7 @@ $stat = Edge_Widget::widget('Widget_Stat');
 
 <?php if($user->pass('contributor', true)): ?>
 <div class="mdui-container-fluid" style="font-size:12pt;padding-left:15pt;padding-right:15pt;vertical-align:middle;padding-top:10pt;">
-<div class="page-header">
-  <h3 class="page-title">
-  	<svg t="1587465469434" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1966" width="30" height="30"><path d="M1024 466.8H557.4V0c121.9 7.3 236.3 58.4 322.3 144.4 85.9 85.9 137 200.3 144.3 322.4z" fill="#F79633" p-id="1967"></path><path d="M120.7 853.7C42.9 763.8 0 649.7 0 531.6 0 400 51.2 276.4 144.3 183.4c83.5-83.5 194.6-134 312.9-142.5v477.2L120.7 853.7z m372 170.3c131.5 0 255-51.2 347.9-144.1 83.7-83.7 134.2-194.8 142.6-313.1l-475-1.5-337.9 338c90 77.9 204.1 120.7 322.1 120.7h0.3z" fill="#626262" p-id="1968"></path></svg>博客数据
-  </h3>
-</div>
+
 <div class="row">
   <div class="mdui-col-xs-4">
 	<div class="card bg-gradient-danger card-img-holder text-white">
