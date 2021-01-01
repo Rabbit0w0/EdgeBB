@@ -5,7 +5,7 @@
           <?php if($this->options->avatarUrl != ''): ?>
             <h2><a href="<?php Helper::options()->siteUrl()?>"><img src="<?php echo $this->options->avatarUrl; ?>"/></a></h2>
           <?php else: ?>
-            <h2><a href="<?php Helper::options()->siteUrl()?>"><img src="https://sdn.geekzu.org/avatar/<?php echo md5($this->author->mail); ?>"/></a></h2>
+            <h2><a href="<?php Helper::options()->siteUrl()?>"><img src="http://www.gravatar.com/avatar/<?php echo md5($this->author->mail); ?>"/></a></h2>
           <?php endif; ?>
           <h2><a href="<?php Helper::options()->siteUrl()?>"><?php $this->options->title(); ?></a></h2>
           <p><?php $this->options->description() ?></p>

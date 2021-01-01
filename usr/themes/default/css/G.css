@@ -1054,6 +1054,9 @@ p.word{
     margin-bottom:30px;
     overflow: hidden;
 }
+.Sliderbar-content-switch{
+	float: left!important;
+}
 .sliderbar-content h2{
 	padding:0;
 	margin:0;
