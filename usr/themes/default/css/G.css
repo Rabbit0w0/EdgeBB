@@ -155,7 +155,16 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 	-o-transition: .6s ease all;
 	transition: .6s ease all;
 }
-
+/**
+ * Rabbit0w0说她要加一点特效
+ */
+ #blur{
+	filter:blur(10px);
+	-webkit-filter:blur(10px);
+	-moz-filter:blur(10px);
+	-ms-filter:blur(10px);
+	-o-filter:blur(10px);
+}
 /**
  * 小部件
  */
