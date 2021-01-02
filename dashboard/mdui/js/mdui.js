@@ -5981,10 +5981,9 @@
       this.$anchor = $(anchorSelector).first();
       this.$element = $(menuSelector).first();
       // 触发菜单的元素 和 菜单必须是同级的元素，否则菜单可能不能定位
-    //   if (!this.$anchor.parent().is(this.$element.parent())) {
-    //       throw new Error('anchorSelector and menuSelector must be siblings');
-    //   }
-    //Rabbit0w0: 不好
+      if (!this.$anchor.parent().is(this.$element.parent())) {
+          throw new Error('anchorSelector and menuSelector must be siblings');
+      }
       extend(this.options, options);
       // 是否是级联菜单
       this.isCascade = this.$element.hasClass('mdui-menu-cascade');
