@@ -24,6 +24,7 @@
     background: rgba(17, 17, 17, 0.6);
     transition: all 0.3s;
     z-index: 100000;
+    filter:blur(5px);
   }
 
   .lgbox .overlay~* {
@@ -37,8 +38,9 @@
   }
 
   .lgmain {
-    background: rbga(255,255,255,0.57);
+    background: rgba(255,255,255, 0.57);
     padding: 25px;
+    border-radius: 15px;
   }
 
   .lgbox>input:checked~* {
