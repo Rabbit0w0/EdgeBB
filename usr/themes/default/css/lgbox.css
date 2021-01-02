@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif
+  }
+
+  .button {
+    background: bisque;
+    color: #fff;
+    padding: 10px 25px;
+  }
+
+  .lgbox>input {
+    display: none;
+  }
+
+  .lgbox>input~* {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0
+  }
+
+  .lgbox .overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin: 0;
+    border-radius: 0;
+    background: rgba(17, 17, 17, 0.6);
+    transition: all 0.3s;
+    z-index: 100000;
+  }
+
+  .lgbox .overlay~* {
+    border: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
+    z-index: 1000000;
+    transition: all .3s ease;
+  }
+
+  .main {
+    background: #fff;
+    padding: 10px;
+  }
+
+  .lgbox>input:checked~* {
+    display: block;
+    opacity: 1;
+    max-height: 10000px;
+  }
+
+  .lgbox>input:checked~.overlay~* {
+    max-height: 90%;
+    overflow: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+  }

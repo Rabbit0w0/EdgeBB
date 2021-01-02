@@ -3,14 +3,14 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
     mode: "production",
     entry: {
-        "./dashboard":"./dashboard/style/login_index.js"
+        "LoginPage":"./dashboard/style/login_index.js"
     },
     output: {
         path: path.resolve(__dirname, "./dashboard/_bundles"),
         filename: "bundle.[fullhash:8].js" 
     },
     optimization: {
-        minimize: false,
+        minimize: true,
         minimizer: [
           new TerserPlugin({
             extractComments: {
