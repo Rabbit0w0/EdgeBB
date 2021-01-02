@@ -1,3 +1,4 @@
+
 <html>
 <head>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width"/>
@@ -18,9 +19,8 @@
 	<?php endif; ?>
 	<link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/toastr/build/toastr.min.css" rel="stylesheet">
-	<link href="/usr/themes/default/css/float-pad.css" rel="stylesheet">
+	<link href="/usr/themes/default/css/lgbox.css" rel="stylesheet">
 	<script src="/usr/themes/default/skriptz/DPlayer.min.js"></script>
-	<script src="/usr/themes/default/skriptz/lgBox.js"></script>
 
 	<style>
 		<?php if ($this->options->IndexStyle == 1): ?>
@@ -201,6 +201,11 @@
 					        <a style=" cursor: pointer;"class="search-form-input">搜索</a>
 						<?php endif; ?>
 					</nav>
+					<? Edge_Widget::widget('Widget_User')->to($user); if($user->hasLogin()): ?>
+						<label class="lgbutton">欢迎回来, <?php $user->screenName() ?>
+					<?php else: ?>
+						<label for="ModalLg" class="lgbutton">登陆</label>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
