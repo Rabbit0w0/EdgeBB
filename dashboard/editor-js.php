@@ -11,21 +11,6 @@
 
                 var textarea = $('#text').parent("p");
                 var isMarkdown = $('[name=markdown]').val()?1:0;
-                if (!isMarkdown) {
-                    var notice = $('<div class="message notice"><?php _e('本文Markdown解析已禁用！'); ?> '
-                        + '<button class="btn btn-xs primary yes"><?php _e('启用'); ?></button> '
-                        + '<button class="btn btn-xs no"><?php _e('保持禁用'); ?></button></div>')
-                        .hide().insertBefore(textarea).slideDown();
-
-                    $('.yes', notice).click(function () {
-                        notice.remove();
-                        $('<input type="hidden" name="markdown" value="1" />').appendTo('.submit');
-                    });
-
-                    $('.no', notice).click(function () {
-                        notice.remove();
-                    });
-                }
                     $('#text').wrap("<div id='text-editormd'></div>");
                     postEditormd = editormd("text-editormd", {
                         width: "100%",
@@ -41,7 +26,7 @@
                         flowChart: true,  // 默认不解析
                         sequenceDiagram: true,
                         toolbarIcons: function () {
-                            return ["undo", "redo", "|", "bold", "del", "italic", "quote", "h1", "h2", "h3", "h4", "|", "list-ul", "list-ol", "hr", "|", "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime"<?php echo $editormd->emoji ? ', "emoji"' : ''; ?>, "html-entities", "more", "|", "goto-line", "watch", "preview", "fullscreen", "clear", "|", "help", "info", "|", "isMarkdown"]
+                            return ["undo", "redo", "|", "bold", "del", "italic", "quote", "h1", "h2", "h3", "h4", "|", "list-ul", "list-ol", "hr", "|", "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime"<?php echo $editormd->emoji ? ', "emoji"' : ''; ?>, "html-entities", "more", "|", "goto-line", "watch", "preview", "clear", "|", "help", "info"]
                         },
                         toolbarIconsClass: {
                             more: "fa-newspaper-o",  // 指定一个FontAawsome的图标类
@@ -57,45 +42,6 @@
                              */
                             more: function (cm, icon, cursor, selection) {
                                 cm.replaceSelection("<!--more-->");
-                            },
-                            isMarkdown: function (cm, icon, cursor, selection) {
-                                if(!$("div.message.notice").html()){
-                                var isMarkdown = $('[name=markdown]').val()?$('[name=markdown]').val():0;
-                                if (isMarkdown==1) {
-                                    var notice = $('<div class="message notice"><?php _e('本文Markdown解析已启用！'); ?> '
-                                        + '<button class="btn btn-xs no"><?php _e('禁用'); ?></button> '
-                                        + '<button class="btn btn-xs primary yes"><?php _e('保持启用'); ?></button></div>')
-                                        .hide().insertBefore(textarea).slideDown();
-
-                                    $('.yes', notice).click(function () {
-                                        notice.remove();
-                                    });
-
-                                    $('.no', notice).click(function () {
-                                        notice.remove();
-                                        $("[name=markdown]").val(0);
-                                        postEditormd.unwatch();
-                                    });
-                                } else {
-                                    var notice = $('<div class="message notice"><?php _e('本文Markdown解析已禁用！'); ?> '
-                                        + '<button class="btn btn-xs primary yes"><?php _e('启用'); ?></button> '
-                                        + '<button class="btn btn-xs no"><?php _e('保持禁用'); ?></button></div>')
-                                        .hide().insertBefore(textarea).slideDown();
-
-                                    $('.yes', notice).click(function () {
-                                        notice.remove();
-                                        postEditormd.watch();
-                                        if(!$("[name=markdown]").val())
-                                            $('<input type="hidden" name="markdown" value="1" />').appendTo('.submit');
-                                        else
-                                            $("[name=markdown]").val(1);
-                                    });
-
-                                    $('.no', notice).click(function () {
-                                        notice.remove();
-                                    });
-                                }
-                            }
                             }
                         },
                         lang: {
