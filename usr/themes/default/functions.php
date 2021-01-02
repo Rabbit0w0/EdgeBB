@@ -485,32 +485,6 @@ function shortcodeContent($content)
 }
 
 /**
-* 字数统计
-* #author lushangkan
-* #web:cutemc.cn
-*/
-Edge_Plugin::factory('dashboard/write-post.php')->bottom = array('wordcount', 'one');
-Edge_Plugin::factory('dashboard/write-page.php')->bottom = array('wordcount', 'one');
-class wordcount {
-    public static function one()
-    {
-    ?>
-<script language="javascript">
-    function setLength(obj,id){
-    var leng=id;
-    var parser = new HyperDown;
-    html = parser.makeHtml(obj.value);
-    var texthtml = document.createElement("div");
-    texthtml.innerHTML = html;
-    document.getElementById(leng).innerHTML=texthtml.textContent.length+"";
-    }
-</script>
-<?php
-    }
-}
-
-
-/**
 * 免插件实现友情链接功能
 * @author OFFODD<https://www.offodd.com/59.html>
 * @access public
