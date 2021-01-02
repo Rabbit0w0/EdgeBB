@@ -2,7 +2,7 @@
     float: right;
     color: white;
   }
-  
+
   .lgbox>input {
     display: none;
   }
@@ -37,8 +37,8 @@
   }
 
   .lgmain {
-    background: #fff;
-    padding: 10px;
+    background: rbga(255,255,255,0.57);
+    padding: 25px;
   }
 
   .lgbox>input:checked~* {
@@ -53,3 +53,42 @@
     -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);
     transform: translateX(-50%) translateY(-50%) scale(1, 1);
   }
+
+  .input_outer:focus {
+    background: #fff;
+    border-color: #20a0ff;
+    -webkit-box-shadow: 0 0 0 3px rgba(32,160,255,.2)!important;
+    box-shadow: 0 0 0 3px rgba(32,160,255,.2)!important;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+.input_outer{
+	height: 46px;
+	padding: 0 5px;
+	margin-bottom: 30px;
+	border-radius: 50px;
+	position: relative;
+	border: rgba(0, 0, 0, 0.57) 1px solid !important;
+	background: #ffffffe6;
+}
+.input_outer:focus{
+    background: #ffffff;
+}
+.text{
+	width: -webkit-fill-available;
+	height: 44px;
+	outline: none;
+	display: inline-block;
+	font: 14px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei";
+	margin-left: 50px;
+	border: none;
+	background: none;
+	line-height: 46px;
+	color: #042842 !important;
+	margin-bottom: 30px;
+    border-radius: 50px;
+}
+.lgform{
+	width: 485px;
+  height: auto;
+}

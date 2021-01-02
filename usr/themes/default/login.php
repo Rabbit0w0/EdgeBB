@@ -5,7 +5,7 @@
   <input type="checkbox" name="" id="ModalLg">
   <label for="ModalLg" class="overlay"></label>
   <div class="lgmain">
-    <form action="<?php Edge_Widget::widget('Widget_Options')->to($options);$options->loginAction(); ?>" method="post" name="login" role="form">
+    <form class="lgform" action="<?php Edge_Widget::widget('Widget_Options')->to($options);$options->loginAction(); ?>" method="post" name="login" role="form">
 			<div class="input_outer">
 					<input name="name" class="text" type="text" placeholder="Account">
 				</div>
