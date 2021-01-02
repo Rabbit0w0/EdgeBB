@@ -1,7 +1,3 @@
-import "./jquery";
-import "./jquery-ui";
-
-
 (function (w) {
     w.Edge = {
         insertFileToEditor  :   function (file, url, isImage) {},
