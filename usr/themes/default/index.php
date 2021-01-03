@@ -1,4 +1,5 @@
 <?php
+Edge_Widget::widget('Widget_Options')->to($options);Edge_Widget::widget('Widget_User')->to($user); 
 /**
  * 默认主题 For EdgeBB
  *
@@ -24,8 +25,7 @@
 
   </div>
 </div>
-
-
+<?php $this->need('login.php') ?>
 
 
   <?php $this->need('footer.php'); ?>

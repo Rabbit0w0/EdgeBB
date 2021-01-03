@@ -390,14 +390,11 @@ function Comment_hash_fix($archive){
           dom : function (id) {
               return document.getElementById(id);
           },
-
           create : function (tag, attr) {
               var el = document.createElement(tag);
-
               for (var key in attr) {
                   el.setAttribute(key, attr[key]);
               }
-
               return el;
           },
           reply : function (cid, coid) {
@@ -483,6 +480,7 @@ function shortcodeContent($content)
     $fcontent = preg_replace('#\@\((.*?)\)#','<img src="/usr/themes/default/image/bq/$1.png" class="bq">',$fcontent);
     return $fcontent;
 }
+
 
 /**
 * 免插件实现友情链接功能
