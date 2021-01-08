@@ -4,7 +4,7 @@ include 'common.php';
 include 'header.php';
 include 'menu.php';
 include 'TUi.php';
-Edge_Widget::widget('Widget_Contents_Post_Edit')->to($post);
+Edge_Widget::widget('Widget_Contents_Page_Edit')->to($post);
 ?>
 <!DOCTYPE HTML>
 <html class="no-js">
@@ -15,7 +15,7 @@ Edge_Widget::widget('Widget_Contents_Post_Edit')->to($post);
 	<script src="./js/lute.min.js"></script>
 </head>
 
-<form class="row" role="form" action="<?php $security->index('/action/contents-post-edit'); ?>" method="post" name="write_post">
+<form class="row" role="form" action="<?php $security->index('/action/contents-page-edit'); ?>" method="post" name="write_post">
 	<div class="col-md-9 grid-margin stretch-card" role="main">
 		<div class="card">
 			<div class="card-body">

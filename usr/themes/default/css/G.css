@@ -16,6 +16,9 @@
 	-webkit-appearance:none;
   -webkit-tap-highlight-color: transparent;
 }
+.edgeforce h2{
+	float:left !important;
+}
 pre{
 	background-color: #eee;
 }

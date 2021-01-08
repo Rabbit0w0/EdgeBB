@@ -29,7 +29,7 @@
       <hr>
     </div>
   </div>
-  <div class="sliderbar-content-menu">
+  <div class="sliderbar-content-menu edgeforce">
     <div class="Sliderbar-content clear">
       <div class="Sliderbar-content-switch clear">
         <h2>CATEGORIES</h2>
@@ -40,9 +40,9 @@
       </div>
     </div>
   </div>
-  <div class="sliderbar-content-menu">
+  <div class="sliderbar-content-menu edgeforce">
     <div class="Sliderbar-content clear">
-      <div class="Sliderbar-content-switch clear">
+      <div class="Sliderbar-content-switch clear force-float-left">
         <h2>PAGES</h2>
         <a onclick="show_slide_content(2);"><i class="i down"></i></a>
       </div>

@@ -55,6 +55,7 @@ Edge_Widget::widget('Widget_Contents_Post_Edit')->to($post);
 					const vditor = new Vditor('vditor', {
 						"height": 500,
 						"theme": "classic",
+						"value":"<? echo $post ?>"
 						"input"(text, html){
 							
 						},
