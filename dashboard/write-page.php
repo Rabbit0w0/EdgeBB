@@ -176,7 +176,7 @@ Edge_Widget::widget('Widget_Contents_Page_Edit')->to($post);
 							<p class="description"><?php _e('每一行一个引用地址, 用回车隔开'); ?></p>
 						</section>
 
-						<?php Edge_Plugin::factory('dashboard/write-post.php')->advanceOption($post); ?>
+						<?php Edge_Plugin::factory('dashboard/write-page.php')->advanceOption($post); ?>
 					</div><!-- end #advance-panel -->
 
 					<?php if ($post->have()) : ?>
@@ -186,7 +186,7 @@ Edge_Widget::widget('Widget_Contents_Page_Edit')->to($post);
 								<br>&mdash;<br>
 								<?php _e(
 									'本文由 <a href="%s">%s</a> 撰写',
-									Edge_Common::url('manage-posts.php?uid=' . $post->author->uid, $options->adminUrl),
+									Edge_Common::url('manage-pages.php?uid=' . $post->author->uid, $options->adminUrl),
 									$post->author->screenName
 								); ?><br>
 								<?php _e('最后更新于 %s', $modified->word()); ?>
@@ -208,12 +208,12 @@ include 'common-js.php';
 include 'form-js.php';
 include 'write-js.php';
 
-Edge_Plugin::factory('dashboard/write-post.php')->trigger($plugged)->richEditor($post);
+Edge_Plugin::factory('dashboard/write-page.php')->trigger($plugged)->richEditor($post);
 if (!$plugged) {
 	include 'editor-js.php';
 }
 include 'file-upload-js.php';
 include 'custom-fields-js.php';
-Edge_Plugin::factory('dashboard/write-post.php')->bottom($post);
+Edge_Plugin::factory('dashboard/write-page.php')->bottom($post);
 include 'footer.php';
 ?>
