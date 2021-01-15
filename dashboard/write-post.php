@@ -55,7 +55,7 @@ Edge_Widget::widget('Widget_Contents_Post_Edit')->to($post);
 					const vditor = new Vditor('vditor', {
 						"height": 500,
 						"theme": "classic",
-						"value":"<? echo htmlspecialchars($post->text); ?>"
+						"value":"<? echo htmlspecialchars($post->text); ?>",
 						"input"(text, html){
 							
 						},
@@ -178,11 +178,11 @@ Edge_Widget::widget('Widget_Contents_Post_Edit')->to($post);
 							<p class="description">
 								<br>&mdash;<br>
 								<?php _e(
-									'本文由 <a href="%s">%s</a> 撰写',
+									'本文由<a href="%s">%s</a>撰写',
 									Edge_Common::url('manage-posts.php?uid=' . $post->author->uid, $options->adminUrl),
 									$post->author->screenName
 								); ?><br>
-								<?php _e('最后更新于 %s', $modified->word()); ?>
+								<?php _e('最后更新于%s', $modified->word()); ?>
 							</p>
 						</section>
 					<?php endif; ?>
