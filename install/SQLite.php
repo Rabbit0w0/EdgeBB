@@ -1,5 +1,5 @@
 <?php if(!defined('__EDGE_ROOT_DIR__')) exit; ?>
-<?php $defaultDir = dirname($_SERVER['SCRIPT_FILENAME']) . '/usr/' . uniqid() . '.db'; ?>
+<?php $defaultDir = dirname($_SERVER['SCRIPT_FILENAME']) . '/db/' . uniqid() . '.db'; ?>
 <li>
 <label class="edge-label" for="dbFile"><?php _e('数据库文件路径'); ?></label>
 <input type="text" class="text" name="dbFile" id="dbFile" value="<?php _v('dbFile', $defaultDir); ?>"/>
