@@ -50,15 +50,16 @@ Edge_Widget::widget('Widget_Contents_Post_Edit')->to($post);
 					<label for="slug" class="sr-only"><?php _e('网址缩略名'); ?></label>
 					<?php echo preg_replace("/\{slug\}/i", $input, $permalink); ?>
 				</p>
-				<div id="vditor" class="vditor"></div>
+				<div id="vditor" class="vditor" name="text"></div>
 				<script>
 					const vditor = new Vditor('vditor', {
 						"height": 500,
 						"theme": "classic",
-						"value":"<? echo htmlspecialchars($post->text); ?>",
+						"value": "<?php echo str_replace(PHP_EOL,"\\n",htmlspecialchars($post->text)); ?>",
 						"input"(text, html){
 							
 						},
+						blur() {document.getElementById('vditor-embedded').value=vditor.getValue()},
 						"typewriterMode": true,
 						"cache": {
 							"enable": false
@@ -73,6 +74,8 @@ Edge_Widget::widget('Widget_Contents_Post_Edit')->to($post);
 						}
 					});
 				</script>
+				<!-- Vditor失焦时将内容赋值至此 -->
+				<input type="hidden" id="vditor-embedded" name="text" value=""/>
 				<?php include 'custom-fields.php'; ?>
 
 				<p class="submit clearfix">

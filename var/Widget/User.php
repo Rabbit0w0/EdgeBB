@@ -255,7 +255,10 @@ class Widget_User extends Edge_Widget
     public function pass($group, $return = false)
     {
         if ($this->hasLogin()) {
-            if (array_key_exists($group, $this->groups) && $this->groups[$this->group] <= $this->groups[$group]) {
+            if (
+                array_key_exists($group, $this->groups)/* 判断存不存在一个这个名字的用户组 */
+                && $this->groups[$this->group] <= $this->groups[$group]/*  */
+               ) {
                 return true;
             }
         } else {

@@ -1,5 +1,7 @@
 <?php
 if (!defined('__EDGE_ROOT_DIR__')) exit;
+//now it's a converter from typecho
+
 /**
  * 升级动作
  *
