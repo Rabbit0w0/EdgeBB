@@ -30,7 +30,7 @@ class Markdown
             $parser->enableHtml(true);
         }
 
-        return str_replace('<p><!--more--></p>', '<!--more-->', $parser->makeHtml($text));
+        return str_replace('<p><!--more--></p>', '<!--more-->', $parser->text($text));
     }
 
     /**

@@ -19,9 +19,6 @@
 .edgeforce h2{
 	float:left !important;
 }
-pre{
-	background-color: #eee;
-}
 html::-webkit-scrollbar {
 	height:8px;
 	width:8px

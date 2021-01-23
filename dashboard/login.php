@@ -2,6 +2,8 @@
 // 啥比登陆界面 不想维护了
 // Designed for EdgeBB
 // @copyright Copyright (c) 2019 RenderMatrix010
+
+// Refreshed By Rabbit0w0 in 2021
 include 'common.php';
 
 if ($user->hasLogin()) {
