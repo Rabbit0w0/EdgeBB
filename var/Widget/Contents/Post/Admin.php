@@ -106,6 +106,7 @@ class Widget_Contents_Post_Admin extends Widget_Abstract_Contents
 
         return $value;
     }
+    
 
     /**
      * 执行函数
@@ -120,6 +121,10 @@ class Widget_Contents_Post_Admin extends Widget_Abstract_Contents
 
         /** 构建基础查询 */
         $select = $this->select();
+        /** 过滤公开度 */
+		if (NULL != ($status = $this->request->status)) {
+			$select->where('table.contents.status = ?', $status);
+		}
 
         /** 如果具有编辑以上权限,可以查看所有文章,反之只能查看自己的文章 */
         if (!$this->user->pass('editor', true)) {

@@ -68,6 +68,16 @@ $isAllPosts = ('on' == $request->get('__edge_all_posts') || 'on' == Edge_Cookie:
 								(isset($request->uid) ? 'uid=' . htmlspecialchars($request->get('uid')) : '') : '')); ?>"><?php _e('&laquo; 取消筛选'); ?></a>
 						<?php endif; ?>
 						<input type="text" class="text-s" placeholder="<?php _e('请输入关键字'); ?>" value="<?php echo htmlspecialchars($request->keywords); ?>" name="keywords" />
+						
+						<select name="status">
+							<option value="" selected>公开度</option>
+                            <option value="publish"  <?php if($request->get('status') == 'publish'): ?>selected="true"<?php endif; ?>>公开</option>
+							<option value="hidden" <?php if($request->get('status') == 'hidden'): ?>selected="true"<?php endif; ?>>隐藏</option>
+							<option value="password" <?php if($request->get('status') == 'password'): ?>selected="true"<?php endif; ?>>密码保护</option>
+							<option value="private" <?php if($request->get('status') == 'private'): ?>selected="true"<?php endif; ?>>私密</option>
+							<option value="waiting" <?php if($request->get('status') == 'waiting'): ?>selected="true"<?php endif; ?>>待审核</option>
+                        </select>
+						
 						<select name="category">
 							<option value=""><?php _e('所有分类'); ?></option>
 							<?php Edge_Widget::widget('Widget_Metas_Category_List')->to($category); ?>

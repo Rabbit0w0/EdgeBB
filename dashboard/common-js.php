@@ -20,7 +20,7 @@
                         },
                         path = '<?php echo Edge_Cookie::getPath(); ?>';
 
-                    if (!!cookies.notice && 'success|notice|error'.indexOf(cookies.noticeType) >= 0) {
+                    if (cookies.notice!=undefined) {
                         addToast("EdgeBB", cookies.notice, cookies.noticeType);
                         $.cookie(prefix + '__edge_notice', null, {path : path});
                         $.cookie(prefix + '__edge_notice_type', null, {path : path});
