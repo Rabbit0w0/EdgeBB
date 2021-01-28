@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 include 'common.php';
 include 'header.php';
 include 'menu.php';
@@ -7,9 +6,13 @@ include 'TUi.php';
 $stat = Edge_Widget::widget('Widget_Stat');
 ?>
 
-<?php if($user->pass('contributor', true)): ?>
-<div class="mdui-container-fluid" style="font-size:12pt;padding-left:15pt;padding-right:15pt;vertical-align:middle;padding-top:10pt;">
 
+<div class="mdui-container-fluid" style="font-size:12pt;padding-left:15pt;padding-right:15pt;vertical-align:middle;padding-top:10pt;">
+	
+<div class="page-header">
+  <h3 class="page-title">
+	<svg t="1610104014073" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="855" width="30" height="30"><path d="M64 768h896v64H64zM64 192v512h896V192z m320 384H320V384h64z m192 0H512V384h64z m192 0h-64V320h64z" fill="#2071FF" p-id="856"></path></svg> 博客数据</h3>
+</div>
 <div class="row">
   <div class="mdui-col-xs-4">
 	<div class="card bg-gradient-danger card-img-holder text-white">
@@ -101,8 +104,7 @@ $stat = Edge_Widget::widget('Widget_Stat');
 <br>
 <div class="page-header">
   <h3 class="page-title">
-  	<svg t="1587465557776" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3411" width="30" height="30"><path d="M642 346c-163.476 0-296 132.524-296 296s132.524 296 296 296 296-132.524 296-296-132.524-296-296-296z m0 64c128.13 0 232 103.87 232 232S770.13 874 642 874 410 770.13 410 642s103.87-232 232-232z" fill="#CDCBFF" p-id="3412"></path><path d="M382 86C218.524 86 86 218.524 86 382s132.524 296 296 296 296-132.524 296-296S545.476 86 382 86z m0 64c128.13 0 232 103.87 232 232S510.13 614 382 614 150 510.13 150 382s103.87-232 232-232z" fill="#2600FF" p-id="3413"></path></svg>相关信息
-  </h3>
+  	<svg t="1610104031177" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="855" width="30" height="30"><path d="M64 192h896v64H64zM64 320v512h896V320z m64 256h256v64H128z m576 192H128v-64h576z" fill="#2071FF" p-id="856"></path></svg> 相关信息</h3>
 </div>
 <div class="row">
   <div class="col-md-6 grid-margin stretch-card">
@@ -160,7 +162,7 @@ $stat = Edge_Widget::widget('Widget_Stat');
 					<div class="mdui-list-item-content" style="color:#FF5252;"><?php $comments->date('m.d'); ?></div>
     				<div class="mdui-list-item">
     				<img src="<?php $email =$comments->mail; if($email){if(strpos($email,'@qq.com') !==false){$email=str_replace('@qq.com','',$email);echo '//q1.qlogo.cn/g?b=qq&nk='.$email.'&s=100';}else{$email= md5($email);echo Edge_Common::gravatarUrl($comments->mail, 220, 'X', 'mm', $request->isSecure());}}else{echo '//cdn.v2ex.com/gravatar/null?';} ?>" alt="Image placeholder" class="avatar rounded-circle" style="width:35px;height:35px;margin-right:5px;"><br>
-    				<a><?php $comments->author(true); ?></a>
+    				<?php $comments->author(true); ?>
     				</div>
     			<a href="<?php $comments->permalink(); ?>" class="title">
     			<div class="mdui-list-item" style="color:#3F51B5;"><?php $comments->excerpt(35, '...'); ?></div>
@@ -181,9 +183,6 @@ $stat = Edge_Widget::widget('Widget_Stat');
 	</div>
   </div>
 </div>
-<?php else: ?>
-<h1>Access Denied</h1>
-<?php endif; ?>
 <?php
 include 'copyright.php';
 include 'common-js.php';

@@ -1,8 +1,8 @@
 <?php error_reporting(0);if(!defined('__EDGE_ADMIN__')) exit; ?>
 <div class="container-scroller">
-<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-loaded mdui-drawer-body-left">
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo content-wrapper-before mdui-theme-accent-pink mdui-loaded mdui-drawer-body-left">
 	<header class="mdui-appbar mdui-appbar-fixed">
-			<div class="mdui-toolbar mdui-color-theme">
+			<div class="mdui-toolbar">
 		<!--菜单按钮-->
     <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: &#39;#main-drawer&#39;, swipe: true}">
     <i class="mdui-icon material-icons">menu</i></span>
@@ -39,10 +39,6 @@
                 				<span>评论管理</span>
             				</a> 
             			</li>
-            			<li class="mdui-divider"></li>
-						<li class="mdui-menu-item">
-                		<span><center><?php if ($user->logged > 0) { $logged = new Edge_Date($user->logged); _e('最后登录: %s', $logged->word()); } ?></center></span>
-						</li>
 						<?php endif; ?>
             		</ul>
         		</li>
@@ -68,7 +64,7 @@
 </header>
     <div class="mdui-drawer" id="main-drawer">
   <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
-  	<a href="./index.php" class="mdui-list-item">
+  	<a href="./index.php" class="mdui-list-item mdui-ripple">
       <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">&#xe88a;</i>
       <div class="mdui-list-item-content">首页</div>
     </a>
