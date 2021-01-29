@@ -137,3 +137,24 @@ form{
 	left:0;
 	top:0;
 }
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.act-but{
+	line-height: 20px;
+	text-align: center;
+	font-size: 20px;
+	border-radius: 50px;
+	background: #10315eb8;
+	width: 100%;
+}
+.act-but:hover{
+    background: #10315eeb;
+}

@@ -37,7 +37,6 @@ $bodyClass = 'body-100';
 					<canvas id="back-canvas"></canvas>
 					<div class="logo_box">
 						<form action="<?php $options->loginAction(); ?>" name="f" method="post">
-							<div class="blur"></div>
 							<h3>Log in</h3>
 							<div class="input_outer">
 								<span class="u_user"></span>
@@ -47,7 +46,8 @@ $bodyClass = 'body-100';
 								<span class="us_uer"></span>
 								<input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
 							</div>
-							<div class="mb2"><a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a></div>
+							<div class="mb2"><button class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</button></div>
+							<div class="blur"></div>
 						</form>
 					</div>
 				</div>
