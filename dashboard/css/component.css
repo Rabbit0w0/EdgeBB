@@ -24,10 +24,11 @@
 	width: 480px;
 	height: 320px;
 	color: #EEE;
-	position: relative;
-	margin: 0 auto;
+	position: absolute;
 	top:50%;
 	margin-top: -160px;
+	left: 50%;
+	margin-left: -240px;
 	box-shadow: rgba(255,255,255,0.2);
 }
 .logo_box h3{
