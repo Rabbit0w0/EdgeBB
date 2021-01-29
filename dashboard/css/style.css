@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@font-face {
+	font-family: 'poppin';
+	src : url('https://cdn.jsdelivr.net/gh/youranreus/R@v1.0.3/G/CSS/poppin.ttf');
+}
+@font-face {
+	font-family: 'google';
+	src : url('https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.1/fonts/GoogleSansBold.ttf');
+}
+* {
+	font-family: 'poppin','google',BlinkMacSystemFont,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",sans-serif;
+}
 
 html {
 	height: 100%;
