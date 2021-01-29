@@ -30,34 +30,24 @@ $bodyClass = 'body-100';
 		<script src="js/html5.js"></script>
 		<![endif]-->
 	</head>
-<body>
-		<div class="container">
+	<body>
+		<div class="container login">
 			<div class="content">
-				<div id="large-header" class="large-header" style="height: 695px;">
-					<canvas id="demo-canvas" width="1920" height="695"></canvas>
+				<div id="large-header" class="large-header">
+					<canvas id="back-canvas"></canvas>
 					<div class="logo_box">
-						<h3>Log in to EdgeBB</h3>
-						<form action="<?php $options->loginAction(); ?>" method="post" name="login" role="form">
+						<form action="<?php $options->loginAction(); ?>" name="f" method="post">
+							<div class="blur"></div>
+							<h3>Log in</h3>
 							<div class="input_outer">
 								<span class="u_user"></span>
-								<input name="name" class="text" type="text" placeholder="Account">
+								<input name="logname" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户">
 							</div>
 							<div class="input_outer">
 								<span class="us_uer"></span>
-								<input name="password" class="text"  type="password" placeholder="Password">
+								<input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
 							</div>
-							<div class="remember" style="text-align:center;font-size: 87.5%;">
-							<label for="remember"><input type="checkbox" name="remember" class="checkbox" value="1" id="remember" /> <?php _e('Autologon'); ?></label>
-							</div>
-							<div class="mb2" ><button type="submit" class="act-but submit" style="color: #FFFFFF">登录</button>
-							        <p class="more-link">
-            <a href="<?php $options->siteUrl(); ?>"><?php _e('返回首页'); ?></a>
-            <?php if($options->allowRegister): ?>
-            &bull;
-            <a href="<?php $options->registerUrl(); ?>"><?php _e('用户注册'); ?></a>
-            <?php endif; ?>
-        </p>
-                          </div>
+							<div class="mb2"><a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a></div>
 						</form>
 					</div>
 				</div>
@@ -67,7 +57,8 @@ $bodyClass = 'body-100';
 			<script src="js/rAF.js"></script>
 			<script src="js/ark.js"></script>
 		</div>
-</body></html>
+	</body>
+</html>
 <?php
 include 'footer.php';
 ?>
