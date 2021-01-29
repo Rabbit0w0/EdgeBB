@@ -16,21 +16,20 @@ $bodyClass = 'body-100';
 
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Login</title>
-<link rel="stylesheet" type="text/css" href="./style/normalize.css">
-<link rel="stylesheet" type="text/css" href="./style/admin.css">
-
-<!--必要样式-->
-<link rel="stylesheet" type="text/css" href="./style/component.css">
-<!--[if IE]>
-<script src="js/html5.js"></script>
-<![endif]-->
-</head>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Log in</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/ark.css" />
+		<!--必要样式-->
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!--[if IE]>
+		<script src="js/html5.js"></script>
+		<![endif]-->
+	</head>
 <body>
 		<div class="container">
 			<div class="content">
@@ -44,7 +43,7 @@ $bodyClass = 'body-100';
 								<input name="name" class="text" type="text" placeholder="Account">
 							</div>
 							<div class="input_outer">
-								<span class="u_user"></span>
+								<span class="us_uer"></span>
 								<input name="password" class="text"  type="password" placeholder="Password">
 							</div>
 							<div class="remember" style="text-align:center;font-size: 87.5%;">
@@ -63,20 +62,12 @@ $bodyClass = 'body-100';
 					</div>
 				</div>
 			</div>
+			<script src="js/TweenLite.min.js"></script>
+			<script src="js/EasePack.min.js"></script>
+			<script src="js/rAF.js"></script>
+			<script src="js/ark.js"></script>
 		</div>
-		<!-- 容器 -->
-		<?php
-		include 'bundle.php';
-		?>
 </body></html>
-<?php 
-include 'common-js.php';
-?>
-<script>
-$(document).ready(function () {
-    $('#name').focus();
-});
-</script>
 <?php
 include 'footer.php';
 ?>
