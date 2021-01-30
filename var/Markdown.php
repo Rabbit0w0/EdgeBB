@@ -19,17 +19,7 @@ class Markdown
     public static function convert($text)
     {
         static $parser;
-
-        if (empty($parser)) {
-            $parser = new HyperDown();
-
-            $parser->hook('afterParseCode', function ($html) {
-                return preg_replace("/<code class=\"([_a-z0-9-]+)\">/i", "<code class=\"lang-\\1\">", $html);
-            });
-
-            $parser->enableHtml(true);
-        }
-
+        $parser = new HyperDown();
         return str_replace('<p><!--more--></p>', '<!-- more -->', $parser->text($text));
     }
 

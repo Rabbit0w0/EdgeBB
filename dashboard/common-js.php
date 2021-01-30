@@ -19,7 +19,6 @@
                             highlight   :   $.cookie(prefix + '__edge_notice_highlight')
                         },
                         path = '<?php echo Edge_Cookie::getPath(); ?>';
-
                     if (cookies.notice!=undefined) {
                         addToast("EdgeBB", cookies.notice, cookies.noticeType);
                         $.cookie(prefix + '__edge_notice', null, {path : path});
