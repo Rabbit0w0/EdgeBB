@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 include 'common.php';
 include 'header.php';
 include 'menu.php';
